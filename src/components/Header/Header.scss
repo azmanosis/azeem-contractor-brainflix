@@ -1,23 +1,59 @@
 @use '../../styles/partials/' as *;
 
-.search {
-    background-color: $primary-white;
-    background-image:url(../../assets/icons/search.svg);
-    background-repeat:no-repeat;
-    padding-left:1rem;
+.logo {
+    display:flex;
+    justify-content:center;
 }
 
-.user {
-    height:2.25rem;
-    width:2.25rem;
-    border-radius:50%;
-    background-image:url(../../assets/images/Mohan-muruge.jpg);
-    background-position:contain;
-    background-size:cover;
-    background-color: $secondary-silver;
+.header {
+    display:flex;
+    justify-content:space-between;
     
-    @include tablet {
-        width:3rem;
-        height:3rem;
+
+    &__search {
+        background-color:$primary-white;
+        background-image:url(../../assets/icons/search.svg);
+        background-repeat:no-repeat;
+        padding-left:1rem;
+        font-family:avenir-regular;
+        @include mobile_sectionheader;
+    }
+
+    &__user {
+        height:2.25rem;
+        width:2.25rem;
+        border-radius:50%;
+        background-image:url(../../assets/images/Mohan-muruge.jpg);
+        background-position:contain;
+        background-size:cover;
+        background-color: $secondary-silver;
+        
+        @include tablet {
+            width:3rem;
+            height:3rem;
+        }
+    }
+
+    &__upload {
+        visibility:hidden;
+        width:1px;
+        height:1px;
+
+        @include tablet {
+            visibility:visible;
+            background-image:url(../../assets/icons/upload.svg);
+            background-repeat:no-repeat;
+            border-radius:0.25rem;
+            background-color:$primary-blue;
+            color:$primary-white;
+            @include mobile_sectionheader;
+            font-family:avenir-regular;
+            border:none;
+            width:25%;
+            height:25%;
+        }
+
+
+        
     }
 }
