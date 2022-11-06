@@ -1,59 +1,119 @@
 @use '../../styles/partials/' as *;
 
-.logo {
-    display:flex;
-    justify-content:center;
-}
-
 .header {
-    display:flex;
-    justify-content:space-between;
-    
+    margin:1rem 1rem 0 1rem;
 
-    &__search {
-        background-color:$primary-white;
-        background-image:url(../../assets/icons/search.svg);
-        background-repeat:no-repeat;
-        padding-left:1rem;
-        font-family:avenir-regular;
-        @include mobile_sectionheader;
+    @include tablet {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin:24px 24px 0 24px;
     }
 
-    &__user {
-        height:2.25rem;
-        width:2.25rem;
-        border-radius:50%;
-        background-image:url(../../assets/images/Mohan-muruge.jpg);
-        background-position:contain;
-        background-size:cover;
-        background-color: $secondary-silver;
-        
+    @include desktop {
+        margin:24px 48px 0 48px;
+    }
+
+    &__logo {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        &--height {
+            height:1.5625rem;
+        }
+    }
+
+    &__navigation {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin:1rem 0;
+
         @include tablet {
-            width:3rem;
-            height:3rem;
+            margin:0;
+            width:65%;
+        }
+
+        @include desktop {
+            width:50%;
+        }
+
+        &--search {
+            background-color:$white;
+            background-image:url(../../assets/icons/search.svg);
+            background-repeat:no-repeat;
+            background-position-x: 1rem;
+            background-position-y:center;
+            font-family:averegular;
+            @include mobile_sectionheader;
+            height:2.5rem;
+            border:solid 2px $mercury;
+            border-radius:4px;
+            width:65%;
+            padding-left:2.5rem;
+            color:$black;
+
+            @include tablet {
+                width:50%;
+            }
+        }
+
+        &--upload {
+            visibility:hidden;
+            width:0.1px;
+            height:0.1px;
+
+            @include tablet {
+                visibility:visible;
+                background-image:url(../../assets/icons/upload.svg);
+                background-repeat:no-repeat;
+                background-position-x:5px;
+                background-position-y:center;
+                padding-left:20px;
+                border-radius:0.25rem;
+                background-color:$blue;
+                color:$white;
+                @include mobile_sectionheader;
+                font-family:averegular;
+                border:none;
+                height:2.5rem;
+                width:25%;
+            }
+        }
+
+        &--user {
+            height:2.25rem;
+            width:2.25rem;
+            border-radius:50%;
+            background-image:url(../../assets/images/Mohan-muruge.jpg);
+            background-color:$mercury;
+            background-position:contain;
+            background-size:cover;
+
+            @include tablet {
+                width:3rem;
+                height:3rem;
+            }
         }
     }
 
     &__upload {
-        visibility:hidden;
-        width:1px;
-        height:1px;
+        height:2.5rem;
+        background-image:url(../../assets/icons/upload.svg);
+        background-repeat:no-repeat;
+        background-position-x:15px;
+        background-position-y:center;
+        border-radius:0.25rem;
+        background-color:$blue;
+        color:$white;
+        @include mobile_sectionheader;
+        font-family:avebold;
+        border:none;
+        width:100%;
 
         @include tablet {
-            visibility:visible;
-            background-image:url(../../assets/icons/upload.svg);
-            background-repeat:no-repeat;
-            border-radius:0.25rem;
-            background-color:$primary-blue;
-            color:$primary-white;
-            @include mobile_sectionheader;
-            font-family:avenir-regular;
-            border:none;
-            width:25%;
-            height:25%;
+            display:none;
         }
-
-
-        
     }
 }
