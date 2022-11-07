@@ -8,6 +8,7 @@ function Video() {
                 Videos.map(video => {
                     return (
                         <video poster={video.image} className = "poster" key = {video.id}>
+                            <div className ="poster__navigation"></div>
                         </video>
                     )
                 })
