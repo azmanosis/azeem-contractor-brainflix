@@ -4,11 +4,13 @@ import Data from '../src/data/video-details.json';
 import Video from './components/Video/Video';
 import Section from './components/Section/Section';
 import Comment from './components/Comments/Comments';
+import Nextvideo from './components/Nextvideo/Nextvideo';
 
 
 function App() {
 
-  const details = Data[1]
+  const details = Data[0]
+  const NeVid = Data[1]
 
   return (
     <div>
@@ -38,6 +40,8 @@ function App() {
       <Comment comment={details.comments[2].comment}/>
       <Comment likes={details.comments[2].likes}/>
       <Comment timestamp={details.comments[2].timestamp}/>
+      {/* Nextvideo */}
+      <Nextvideo poster={NeVid.image}/>
     </div>
   );
 }
