@@ -1,18 +1,10 @@
 import './Video.scss';
-import Videos from '../../data/video-details.json';
 
-function Video() {
+function Video (props) {
     return (
         <div>
-            {
-                Videos.map(video => {
-                    return (
-                        <video poster={video.image} className = "poster" key = {video.id}>
-                            <div className ="poster__navigation"></div>
-                        </video>
-                    )
-                })
-            }
+            <video poster={props.poster} className="poster">
+            </video>
         </div>
     )
 }

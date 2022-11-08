@@ -1,27 +1,28 @@
 import './Section.scss';
-import Sections from '../../data/video-details.json';
 
-function Section() {
+function Section(props) {
     return (
         <div className = "section">
-            {
-                Sections.map(section => {
-                    return (
-                        <div className = "section__title" key={section.id}>
-                            {section.title}
-                            {section.channel}
-                        </div>
-
-                            // {video.comments.map(comment => {
-                            //     return (
-                            //         <div className="comment" key= {comment.id}>
-                            //             {comment.name}
-                            //         </div>
-                            //     )
-                            // })}
-                    )
-                })
-            }
+            <div>
+                <h1>{props.title}</h1>
+            </div>
+            <div>
+                <p>
+                    {props.channel}
+                </p>
+                <p>
+                    {props.timestamp}
+                </p>
+                <p>
+                    {props.views}
+                </p>
+                <p>
+                    {props.likes}
+                </p>
+            </div>
+            <div>
+                {props.description}
+            </div>
         </div>
     )
 }
