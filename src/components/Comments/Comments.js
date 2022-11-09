@@ -1,22 +1,24 @@
 import './Comments.scss';
 
 const Comments = (props) => {
-    return (
-        <div>
+    return props.names.map((comment) => {
+        return (
+            <>
             <p>
-                {props.name}
+                {comment.name}
             </p>
             <p>
-                {props.comment}
+                {comment.comment}
             </p>
             <p>
-                {props.likes}
-            </p>
-            <p>
-                {props.timestamp}
-            </p>
-        </div>
-    )
+                {comment.likes}
+                </p>
+                <p>
+                    {comment.timestamp}
+                </p>
+            </>
+        );
+    })
 }
 
 export default Comments
