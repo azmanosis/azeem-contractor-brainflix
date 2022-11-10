@@ -1,7 +1,7 @@
 import './App.scss';
 import Header from './components/Header/Header';
 import Data from '../src/data/video-details.json';
-import VideoList from '../src/data/videos.json';
+// import VideoList from '../src/data/videos.json';
 import Video from './components/Video/Video';
 import Section from './components/Section/Section';
 import Comment from './components/Comments/Comments';
@@ -11,7 +11,7 @@ import Nextvideo from './components/Nextvideo/Nextvideo';
 function App() {
 
   const selectivevideo = Data[0]
-  const NextVideo = VideoList
+  // const NextVideo = VideoList
   // Initial state to Data [0]
   // Initializing state for Video list
 
@@ -31,8 +31,8 @@ function App() {
       
       <Comment comments={selectivevideo.comments}/>
       {/* Nextvideo */}
-      <Nextvideo nextvideo={NextVideo}/>
-      {/* <Nextvideo/> */}
+      {/* <Nextvideo nextvideo={NextVideo}/> */}
+      <Nextvideo/>
     </div>
   );
 }

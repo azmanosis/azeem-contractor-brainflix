@@ -2,6 +2,11 @@ import './Comments.scss';
 
 const Comments = (props) => {
     return props.comments.map((comment) => {
+        function date(timestamp) {
+            const d = new Date(timestamp);
+            return d.toLocaleDateString('en-US', {day:"2-digit", month:"2-digit", year:"numeric"});
+        }
+
         return (
             <>
             <p>
@@ -14,7 +19,7 @@ const Comments = (props) => {
                 {comment.likes}
                 </p>
                 <p>
-                    {comment.timestamp}
+                    {date(comment.timestamp)}
                 </p>
             </>
         );
