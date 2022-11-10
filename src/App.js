@@ -10,47 +10,31 @@ import Nextvideo from './components/Nextvideo/Nextvideo';
 
 function App() {
 
-  const details = Data[0]
-  // change name from details to selective video
+  const selectivevideo = Data[0]
   // Initial state to Data [0]
   // Initializing state for Video list
-  // const VidList = VideoList.filter((video) => {
-  //   return video.id != details.id
-  // })
-  const VidList = VideoList
+  const Videos = VideoList[1];
+  const NextVideo = Videos.filter((video) => {
+    return video.id !== selectivevideo.id;
+  })
 
   return (
     <div>
       {/* Header */}
       <Header />
       {/* Video */}
-      <Video poster={details.image}/>
+      <Video poster={selectivevideo.image}/>
       {/* Section */}
-      <Section title={details.title}/>
-      <Section channel={details.channel}/>
-      <Section views={details.views}/>
-      <Section likes={details.likes}/>
-      <Section timestamp={details.timestamp}/>
-      <Section description={details.description}/>
-      {/* Comment 1 */}
-      {/* <Comment name={details.comments[0].name}/> */}
-      {/* <Comment comment={details.comments[0].comment}/> */}
-      {/* <Comment likes={details.comments[0].likes}/> */}
-      {/* <Comment timestamp={details.comments[0].timestamp}/> */}
-      {/* Comment 2 */}
-      {/* <Comment name={details.comments[1].name}/> */}
-      {/* <Comment comment={details.comments[1].comment}/> */}
-      {/* <Comment likes={details.comments[1].likes}/> */}
-      {/* <Comment timestamp={details.comments[1].timestamp}/> */}
-      {/* Comment 3 */}
-      {/* <Comment name={details.comments[2].name}/> */}
-      {/* <Comment comment={details.comments[2].comment}/> */}
-      {/* <Comment likes={details.comments[2].likes}/> */}
-      {/* <Comment timestamp={details.comments[2].timestamp}/> */}
-
-      <Comment names={details.comments}/>
+      <Section title={selectivevideo.title}/>
+      <Section channel={selectivevideo.channel}/>
+      <Section views={selectivevideo.views}/>
+      <Section likes={selectivevideo.likes}/>
+      <Section timestamp={selectivevideo.timestamp}/>
+      <Section description={selectivevideo.description}/>
+      
+      <Comment names={selectivevideo.comments}/>
       {/* Nextvideo */}
-      <Nextvideo poster={VidList}/>
+      <Nextvideo nextvideo={NextVideo}/>
     </div>
   );
 }
