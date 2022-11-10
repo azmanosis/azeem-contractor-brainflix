@@ -1,7 +1,7 @@
 import './Comments.scss';
 
 const Comments = (props) => {
-    return props.names.map((comment) => {
+    return props.comments.map((comment) => {
         return (
             <>
             <p>

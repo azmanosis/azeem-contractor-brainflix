@@ -11,12 +11,9 @@ import Nextvideo from './components/Nextvideo/Nextvideo';
 function App() {
 
   const selectivevideo = Data[0]
+  const NextVideo = VideoList
   // Initial state to Data [0]
   // Initializing state for Video list
-  const Videos = VideoList[1];
-  const NextVideo = Videos.filter((video) => {
-    return video.id !== selectivevideo.id;
-  })
 
   return (
     <div>
@@ -32,9 +29,10 @@ function App() {
       <Section timestamp={selectivevideo.timestamp}/>
       <Section description={selectivevideo.description}/>
       
-      <Comment names={selectivevideo.comments}/>
+      <Comment comments={selectivevideo.comments}/>
       {/* Nextvideo */}
       <Nextvideo nextvideo={NextVideo}/>
+      {/* <Nextvideo/> */}
     </div>
   );
 }
