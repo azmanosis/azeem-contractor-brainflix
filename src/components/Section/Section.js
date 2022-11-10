@@ -1,9 +1,9 @@
 import './Section.scss';
 
-function date(timestamp) {
-    const d = new Date(timestamp);
-    return d.toLocaleDateString('en-US', {day:"2-digit", month:"2-digit", year:"numeric"});
-}
+// function date(timestamp) {
+//     const d = new Date(timestamp);
+//     return d.toLocaleDateString('en-US', {day:"2-digit", month:"2-digit", year:"numeric"});
+// }
 
 function Section(props) {
     return (
@@ -16,7 +16,8 @@ function Section(props) {
                     {props.channel}
                 </p>
                 <p>
-                    {date(props.timestamp)}
+                    {/* {date(props.timestamp)} */}
+                    {props.timestamp}
                 </p>
                 <p>
                     {props.views}
