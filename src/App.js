@@ -22,12 +22,7 @@ function App() {
       {/* Video */}
       <Video poster={selectivevideo.image}/>
       {/* Section */}
-      <Section title={selectivevideo.title}/>
-      <Section channel={selectivevideo.channel}/>
-      <Section views={selectivevideo.views}/>
-      <Section likes={selectivevideo.likes}/>
-      <Section timestamp={selectivevideo.timestamp}/>
-      <Section description={selectivevideo.description}/>
+      <Section title={selectivevideo.title} channel={selectivevideo.channel} views= {selectivevideo.views} likes={selectivevideo.likes} timestamp={selectivevideo.timestamp}/>
       
       <Comment comments={selectivevideo.comments}/>
       {/* Nextvideo */}
