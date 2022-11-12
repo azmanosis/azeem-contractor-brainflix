@@ -1,22 +1,22 @@
 import './Nextvideo.scss';
-import {useState} from 'react';
-import VideoList from '../../data/videos.json';
+// import {useState} from 'react';
+// import VideoList from '../../data/videos.json';
 
-const Nextvideo = () => {
-    // let name = 'mario';
-    const [name, setName] = useState('mario');
+// const Nextvideo = () => {
+//     // let name = 'mario';
+//     const [name, setName] = useState('mario');
 
-    const handleClick = () => {
-        setName('luigi');
-    }
+//     const handleClick = () => {
+//         setName('luigi');
+//     }
 
-    return (
-        <div>
-            <p>{name}</p>
-            <button onClick={handleClick}>Click me</button>
-        </div>
-    )
-}
+//     return (
+//         <div>
+//             <p>{name}</p>
+//             <button onClick={handleClick}>Click me</button>
+//         </div>
+//     )
+// }
 
 // const videolist = VideoList
 
@@ -43,16 +43,16 @@ const Nextvideo = () => {
 //     )
 // }
 
-// const Nextvideo = (props) => {
-//     return props.nextvideo.map((video) => {
-//         return (
-//             <>
-//                 <img src={video.image} alt=""></img>
-//                 <h1>{video.title}</h1>
-//                 <p>{video.channel}</p>
-//             </>
-//         )
-//     })
-// }
+const Nextvideo = (props) => {
+    return props.nextvideo.map((video) => {
+        return (
+            <>
+                <img className="width" src={video.image} alt=""></img>
+                <h1>{video.title}</h1>
+                <p>{video.channel}</p>
+            </>
+        )
+    })
+}
 
 export default Nextvideo
