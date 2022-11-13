@@ -42,7 +42,7 @@
         &--search {
             background-color:$white;
             background:url(../../assets/icons/search.svg) no-repeat 1rem center;
-            font-family:averegular;
+            font-family:avenir-regular;
             @include mobile_sectionheader;
             height:2.5rem;
             border:solid 2px $mercury;
@@ -69,7 +69,7 @@
                 background-color:$blue;
                 color:$white;
                 @include mobile_sectionheader;
-                font-family:averegular;
+                font-family:avenir-regular;
                 border:none;
                 height:2.5rem;
                 width:25%;
@@ -94,15 +94,12 @@
 
     &__upload {
         height:2.5rem;
-        background-image:url(../../assets/icons/upload.svg);
-        background-repeat:no-repeat;
-        background-position-x:15px;
-        background-position-y:center;
+        background:url(../../assets/icons/upload.svg) no-repeat 15px center;
         border-radius:0.25rem;
         background-color:$blue;
         color:$white;
         @include mobile_sectionheader;
-        font-family:avebold;
+        font-family:avenir-bold;
         border:none;
         width:100%;
 

@@ -5,15 +5,22 @@
     margin:1rem;
     
     &__title {
-        font-family:avenir-bold;
-        border-bottom:0.2rem solid $mercury;
-        padding:0 0 1.5rem 0;
+        @include mobile_pageheader;
+        line-height:3.5rem;
+        font-weight:700;
+
+        &--text {
+            border-bottom:0.2rem solid $mercury;
+            margin:0;
+            padding:0 0 1.5rem 0;
+        }
     }
 
     &__container {
         display:flex;
         justify-content:space-between;
         border-bottom:0.2rem solid $mercury;
+        padding-right:3rem;
 
         &--a {
             
@@ -30,6 +37,7 @@
             }
 
             &--color {
+                @include mobile_sectionheader;
                 color:$silver;
             }
         }
@@ -37,16 +45,24 @@
         &--b {
 
             &--eyecolor {
+                @include mobile_sectionheader;
                 color:$silver;
                 background:url(../../assets/icons/views.svg) no-repeat 0 center;
                 padding-left:2rem;
             }
 
             &--likes {
+                @include mobile_sectionheader;
                 color:$silver;
                 background:url(../../assets/icons/likes.svg) no-repeat 0 center;
                 padding-left:1.5rem;
             }
         }
+    }
+
+    &__comment {
+        font-family:avenir-regular;
+        margin:1rem 0 0 0;
+        font-weight:400;
     }
 }

@@ -1,6 +1,7 @@
 import './Comments.scss';
 
 const Comments = (props) => {
+    console.log("this is props in comments",props);
     return props.comments.map((comment) => {
         function date(timestamp) {
             const d = new Date(timestamp);
@@ -9,18 +10,23 @@ const Comments = (props) => {
 
         return (
             <>
-            <p>
-                {comment.name}
-            </p>
-            <p>
-                {comment.comment}
-            </p>
-            <p>
-                {comment.likes}
-                </p>
-                <p>
-                    {date(comment.timestamp)}
-                </p>
+                <div className="comment">
+                    <div className="comment__a">
+                        <div className="comment__a--image"></div>
+                    </div>
+                    <div className="comment__b">
+                        <div className="comment__b--container">
+                            <h1 className="comment__b--container--name">{comment.name}</h1>
+                            <p className="comment__b--container--timestamp">{date(comment.timestamp)}</p>
+                        </div>
+                        <p className="comment__b--comments">
+                            {comment.comment}
+                        </p>
+                        <button className="comment__b--likes">
+                            {comment.likes}
+                        </button>
+                    </div>
+                </div>
             </>
         );
     })

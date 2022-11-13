@@ -1,34 +1,34 @@
 @use '../../styles/partials/' as *;
 
 .videos {
+    display:flex;
+    justify-content:left;
+    margin:1rem;
     width:100%;
+    cursor:pointer;
 
     &__container {
-        display:flex;
-        justify-content:left;
-        width:100%;
-        cursor:pointer;
+        width:25%;
 
         &--image {
-            width:25%;
+            width:100%;
+            border-radius:.25rem;
+            height:100px;
+        }
+    }
 
-            &--width {
-                width:100%;
-                border-radius:.25rem;
-            }
+    &__heading {
+        margin:0 2rem 0 1rem;
+
+        &--title {
+            font-family:avenir-bold;
+            @include mobile_pageheader;
+            margin:0;
         }
 
-        &--heading {
-
-            &--title {
-                font-family:avenir-bold;
-                @include mobile_pageheader;
-            }
-
-            &--channel {
-                font-family:avenir-bold;
-                @include mobile_subheader;
-            }
+        &--channel {
+            font-family:avenir-bold;
+            @include mobile_subheader
         }
     }
 }

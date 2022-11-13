@@ -1,12 +1,13 @@
 import './App.scss';
 import Header from './components/Header/Header';
-import Data from '../src/data/video-details.json';
-import VideoList from '../src/data/videos.json';
 import Video from './components/Video/Video';
 import {useState} from 'react';
 import Section from './components/Section/Section';
+import Commentbox from './components/Commentbox/Commentbox';
 import Comment from './components/Comments/Comments';
 import Nextvideo from './components/Nextvideo/Nextvideo';
+import Data from '../src/data/video-details.json';
+import VideoList from '../src/data/videos.json';
 
 
 function App() {
@@ -57,37 +58,12 @@ function App() {
       <Header />
       <Video poster={videodetails.image}/>
       <Section sections={videodetails}/>
-      <Comment comments={videodetails.comments}/>
-      <Nextvideo handleClickVideo={handleClickVideo} nextvideo={Data} activevideoid={videodetails.id}/>
-      {/* <Video poster={videodetails}/> */}
-      {/* <VideoDesc maindata={videodetails}/> */}
-      {/* <Nextvideo data={video} changeVideo={changeVideo} videoFilter={videoFilter}/> */}
+      <Commentbox commentlength={videodetails.comments.length} commentword={"Comments"}/>
+      <Comment comments={videodetails.comments} />
+      <p className="nextvideo">next videos</p>
+      <Nextvideo handleClickVideo={handleClickVideo} nextvideo={Data} activevideoid={videodetails.id}/> 
     </>
   )
-
-
-
-  // const selectivevideo = Data[0]
-  // const NextVideo = VideoList
-  
-  // Initial state to Data [0]
-  // Initializing state for Video list
-
-  // return (
-  //   <div>
-  //     {/* Header */}
-  //     <Header />
-  //     {/* Video */}
-  //     <Video poster={selectivevideo.image}/>
-  //     {/* Section */}
-  //     <Section title={selectivevideo.title} channel={selectivevideo.channel} views= {selectivevideo.views} likes={selectivevideo.likes} timestamp={selectivevideo.timestamp}/>
-      
-  //     <Comment comments={selectivevideo.comments}/>
-  //     {/* Nextvideo */}
-  //     <Nextvideo nextvideo={NextVideo}/>
-  //     {/* <Nextvideo/> */}
-  //   </div>
-  // );
 }
 
 export default App;

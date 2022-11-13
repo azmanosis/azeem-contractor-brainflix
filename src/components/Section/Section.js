@@ -9,8 +9,8 @@ function Section(props) {
 
     return (
         <div className = "section">
-            <div>
-                <h1 className="section__title">{props.sections.title}</h1>
+            <div className="section__title">
+                <h1 className="section__title--text">{props.sections.title}</h1>
             </div>
             <div className="section__container">
                 <div className="section__container--a">

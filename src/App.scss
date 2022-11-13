@@ -1,5 +1,10 @@
 @use '../src/styles/partials/' as *;
 
-h1, h2, body {
-
+.nextvideo {
+    margin:2rem 1rem;
+    text-transform:uppercase;
+    @include mobile_subheader;
+    font-family:avenir-bold;
+    font-weight:700;
+    color:$silver;
 }
