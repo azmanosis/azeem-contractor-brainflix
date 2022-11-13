@@ -10,12 +10,19 @@
     background-color:$darkblack;
 
     @include tablet {
+        width:100%;
+        height:22rem;
     }
 
     &__video {
         width:30rem;
         height:100%;
         margin:0;
+
+        @include tablet {
+            width:40rem;
+            height:100%;
+        }
     }
 
     &__controls {

@@ -18,12 +18,21 @@
             width:10rem;
             object-fit:cover;
             background-color:$mercury;
+
+            @include tablet {
+                height:125px;
+                width:12rem;
+            }
         }
     }
 
     &__heading {
-        margin:0 2rem 0 2rem;
+        margin:0 2rem;
         // overflow:hidden;
+
+        @include tablet {
+            margin:0 14rem 0 2rem;
+        }
 
         &--title {
             font-family:avenir-bold;
@@ -35,12 +44,20 @@
             // white-space:nowrap;
             // text-overflow:ellipsis;
             overflow:hidden;
+
+            @include tablet {
+                @include desktop_pageheader;
+            }
         }
 
         &--channel {
             font-family:avenir-bold;
             @include mobile_subheader;
             margin:0.5rem 0 0 0;
+
+            @include tablet {
+                @include desktop_subheader;
+            }
         }
     }
 }

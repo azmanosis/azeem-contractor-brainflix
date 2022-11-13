@@ -7,4 +7,9 @@
     font-family:avenir-bold;
     font-weight:700;
     color:$silver;
+
+    @include tablet {
+        @include desktop_subheader;
+        margin:2rem 1.5rem;
+    }
 }

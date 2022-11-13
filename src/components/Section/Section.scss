@@ -14,10 +14,19 @@
         line-height:3.5rem;
         font-weight:700;
 
+        @include tablet {
+            @include desktop_pageheader;
+            line-height:5rem;
+        }
+
         &--text {
             border-bottom:0.2rem solid $mercury;
             margin:0;
             padding:0 0 1.5rem 0;
+
+            @include tablet {
+                border:none;
+            }
         }
     }
 
@@ -27,7 +36,16 @@
         border-bottom:0.2rem solid $mercury;
         padding-right:3rem;
 
+        @include tablet {
+            padding-right:0;
+        }
+
         &--a {
+
+            @include tablet {
+                display:flex;
+                align-items:center;
+            }
             
             &--bold {
                 display:flex;
@@ -37,6 +55,7 @@
                 font-weight:700;
 
                 @include tablet {
+                    margin:0 2rem 0 0;
                     @include desktop_sectionheader;
                 }
             }
@@ -45,10 +64,19 @@
                 font-family:avenir-regular;
                 @include mobile_sectionheader;
                 color:$silver;
+
+                @include tablet {
+                    @include desktop_sectionheader;
+                }
             }
         }
 
         &--b {
+
+            @include tablet {
+                display:flex;
+                align-items:center;
+            }
 
             &--eyecolor {
                 font-family:avenir-regular;
@@ -56,6 +84,11 @@
                 color:$silver;
                 background:url(../../assets/icons/views.svg) no-repeat 0 center;
                 padding-left:2rem;
+
+                @include tablet {
+                    @include desktop_sectionheader;
+                    margin: 0 2rem 0 0;
+                }
             }
 
             &--likes {
@@ -64,6 +97,10 @@
                 color:$silver;
                 background:url(../../assets/icons/likes.svg) no-repeat 0 center;
                 padding-left:1.5rem;
+
+                @include tablet {
+                    @include desktop_sectionheader;
+                }
             }
         }
     }
@@ -73,5 +110,9 @@
         font-family:avenir-regular;
         margin:1rem 0 0 0;
         font-weight:400;
+
+        @include tablet {
+            @include desktop_bodycopy;
+        }
     }
 }

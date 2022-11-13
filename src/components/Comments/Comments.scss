@@ -12,7 +12,11 @@
 
     &__a {
         width:2.25rem;
-        height:10rem;
+        height:5rem;
+
+        @include tablet {
+            width:3rem;
+        }
 
         &--image {
             width:2.25rem;
@@ -20,11 +24,20 @@
             border-radius:50%;
             background-color:$mercury;
             margin:0.8rem 0 0 0;
+
+            @include tablet {
+                width:3rem;
+                height:3rem;
+            }
         }
     }
 
     &__b {
         margin:0 0 0 1rem;
+
+        @include tablet {
+            margin:0 0 1.5rem 1.5rem;
+        }
 
         &--container {
             display:flex;
@@ -37,6 +50,10 @@
                 font-family:avenir-bold;
                 font-weight:700;
                 @include mobile_subheader;
+
+                @include tablet {
+                    @include desktop_subheader;
+                }
             }
 
             &--timestamp {
@@ -44,6 +61,10 @@
                 font-weight:400;
                 color:$silver;
                 @include mobile_subheader;
+
+                @include tablet {
+                    @include desktop_subheader;
+                }
             }
         }
 
@@ -51,6 +72,12 @@
             font-family:avenir-regular;
             font-weight:400;
             @include mobile_bodycopy;
+
+            @include tablet {
+                @include desktop_bodycopy;
+                padding:0;
+                margin-top:0;
+            }
         }
 
         &--likes {
@@ -60,6 +87,10 @@
             border:none;
             font-family:avenir-regular;
             @include mobile_bodycopy;
+
+            @include tablet {
+                @include desktop_bodycopy;
+            }
         }
     }
 }

@@ -72,7 +72,7 @@
             height:0.1px;
 
             @include tablet {
-                // visibility:visible;
+                visibility:visible;
                 background:url(../../assets/icons/upload.svg) no-repeat .3125rem center;
                 padding-left:20px;
                 border-radius:0.25rem;
@@ -80,13 +80,14 @@
                 color:$white;
                 @include mobile_label-buttons;
                 font-family:avenir-regular;
-                border:none;
+                border:solid 2px $blue;
                 height:2.5rem;
                 width:25%;
                 cursor:pointer;
 
                 &:hover {
                     background-color:$darkblue;
+                    border:solid 2px $darkblue;
                 }
             }
         }

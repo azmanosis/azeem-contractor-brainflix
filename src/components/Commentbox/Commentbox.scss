@@ -10,6 +10,10 @@
     &__text {
         @include mobile_sectionheader;
         font-family:avenir-bold;
+
+        @include tablet {
+            @include desktop_sectionheader;
+        }
     }
 
     &__container {
@@ -20,9 +24,17 @@
         margin:0;
         padding:0 0 1rem 0;
 
+        @include tablet {
+            // width:80rem;
+        }
+
         &--a {
             width:2.25rem;
-            height:200px;
+            height:50px;
+
+            @include tablet {
+                width:3rem;
+            }
 
             &--image {
                 height:2.25rem;
@@ -33,6 +45,12 @@
                 background-size:cover;
                 background-color:$mercury;
                 margin:1.75rem 0 0 0;
+
+                @include tablet {
+                    height:3rem;
+                    width:3rem;
+                    margin:1.3rem 0 0 0;
+                }
             }
         }
 
@@ -40,53 +58,89 @@
             padding-left:1rem;
             width:75vw;
 
+            @include tablet {
+                width:100%;
+            }
+
             &--words {
                 color:$silver;
                 text-transform: uppercase;
                 font-family:avenir-bold;
                 @include mobile_subheader;
-            }
-
-            &--input {
-                border-radius:0.25rem;
-                border:solid 2px $mercury;
-                width:100%;
-                height:8rem;
-                margin:.25rem 0 0 0;
-                @include mobile_bodycopy;
-                padding-left:.75rem;
-                background-color:$alabaster;
 
                 @include tablet {
-                    padding-left:1rem;
+                    @include desktop_subheader;
+                    margin:0 0 .25rem 0;
                 }
-
-                &::placeholder {
-                    color:$black;
-                    // padding-left:1rem;
-                    @include mobile_bodycopy;
-                    position:relative;
-                    bottom:3.125rem;
-                } 
             }
 
-            &--button {
-                height:2.5rem;
-                background:url(../../assets/icons/add_comment.svg) no-repeat 15px center;
-                border-radius:0.25rem;
-                background-color:$blue;
-                color:$white;
-                @include mobile_label-buttons;
-                font-family:avenir-bold;
-                border:none;
-                width:105%;
-                height:2.5rem;
-                margin:1rem 0 0 0;
-                text-transform:uppercase;
-                cursor:pointer;
+            &--inbut {
 
-                &:hover {
-                    background-color:$darkblue;
+                @include tablet {
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                    width:100%;
+                }
+
+                &--input {
+                    border-radius:0.25rem;
+                    border:solid 2px $mercury;
+                    width:100%;
+                    height:8rem;
+                    margin:.25rem 0 0 0;
+                    @include mobile_bodycopy;
+                    padding-left:.75rem;
+                    background-color:$alabaster;
+    
+                    @include tablet {
+                        padding-left:1rem;
+                        @include desktop_bodycopy;
+                        height:2.5rem;
+                        margin:0;
+                        width:71%;
+                    }
+    
+                    &::placeholder {
+                        color:$black;
+                        // padding-left:1rem;
+                        @include mobile_bodycopy;
+                        position:relative;
+                        bottom:3.125rem;
+    
+                        @include tablet {
+                            bottom:0;
+                            @include desktop_bodycopy;
+                        }
+                    } 
+                }
+    
+                &--button {
+                    height:2.5rem;
+                    background:url(../../assets/icons/add_comment.svg) no-repeat 15px center;
+                    border-radius:0.25rem;
+                    background-color:$blue;
+                    color:$white;
+                    @include mobile_label-buttons;
+                    font-family:avenir-bold;
+                    border:none;
+                    width:105%;
+                    height:2.5rem;
+                    margin:1rem 0 0 0;
+                    text-transform:uppercase;
+                    cursor:pointer;
+    
+                    @include tablet {
+                        @include desktop_label-buttons;
+                        width:9.375rem;
+                        padding:0 2rem;
+                        background-position-x:.375rem;
+                        margin:0 0 0 1rem;
+                    }
+    
+                    &:hover {
+                        background-color:$darkblue;
+                    }
                 }
             }
         }
