@@ -14,7 +14,7 @@ function Commentbox (props) {
                     <form id="submit-comment" className="commentbox__container--b">
                         <label className="commentbox__container--b--words" for="conversation">join the conversation</label>
                         {/* <textarea id="enter__comment" className="commentbox__container--b--input" placeholder="Add a new comment" name="conversation"></textarea> */}
-                        <input id="enter__comment" className="commentbox__container--b--input" placeholder="Add a new comment" name="conversation"></input>
+                        <input id="enter__comment" className="commentbox__container--b--input" type="text" value="" placeholder="Add a new comment" name="conversation"></input>
                         <button className="commentbox__container--b--button">comment</button>
                     </form>
                 </div>

@@ -3,6 +3,10 @@
 .commentbox {
     margin:2rem 1rem 1rem 1rem;
 
+    @include tablet {
+        margin:2rem 1.5rem 1rem 1.5rem;
+    }
+
     &__text {
         @include mobile_sectionheader;
         font-family:avenir-bold;
@@ -34,7 +38,7 @@
 
         &--b {
             padding-left:1rem;
-            width:80vw;
+            width:75vw;
 
             &--words {
                 color:$silver;
@@ -45,15 +49,21 @@
 
             &--input {
                 border-radius:0.25rem;
-                border-color:$mercury;
-                border-width:1px;
+                border:solid 2px $mercury;
                 width:100%;
                 height:8rem;
-                margin:0.5rem 0 0 0;
+                margin:.25rem 0 0 0;
+                @include mobile_bodycopy;
+                padding-left:.75rem;
+                background-color:$alabaster;
+
+                @include tablet {
+                    padding-left:1rem;
+                }
 
                 &::placeholder {
                     color:$black;
-                    padding-left:1rem;
+                    // padding-left:1rem;
                     @include mobile_bodycopy;
                     position:relative;
                     bottom:3.125rem;
@@ -66,12 +76,18 @@
                 border-radius:0.25rem;
                 background-color:$blue;
                 color:$white;
-                @include mobile_sectionheader;
+                @include mobile_label-buttons;
                 font-family:avenir-bold;
                 border:none;
-                width:100%;
+                width:105%;
+                height:2.5rem;
                 margin:1rem 0 0 0;
                 text-transform:uppercase;
+                cursor:pointer;
+
+                &:hover {
+                    background-color:$darkblue;
+                }
             }
         }
     }

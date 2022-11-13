@@ -49,7 +49,7 @@
             border-radius:4px;
             width:65%;
             padding-left:2.5rem;
-            color:$black;
+            color:$darkblack;
 
             @include tablet {
                 width:50%;
@@ -57,22 +57,37 @@
         }
 
         &--upload {
+            // background:url(../../assets/icons/upload.svg) no-repeat .3125rem center;
+            // padding-left:1.25rem;
+            // border-radius:.25rem;
+            // background-color:$blue;
+            // color:$white;
+            // @include mobile_label-buttons;
+            // font-family:avenir-regular;
+            // border:none;
+            // height:2.5rem;
+            // width:25%;
             visibility:hidden;
             width:0.1px;
             height:0.1px;
 
             @include tablet {
-                visibility:visible;
+                // visibility:visible;
                 background:url(../../assets/icons/upload.svg) no-repeat .3125rem center;
                 padding-left:20px;
                 border-radius:0.25rem;
                 background-color:$blue;
                 color:$white;
-                @include mobile_sectionheader;
+                @include mobile_label-buttons;
                 font-family:avenir-regular;
                 border:none;
                 height:2.5rem;
                 width:25%;
+                cursor:pointer;
+
+                &:hover {
+                    background-color:$darkblue;
+                }
             }
         }
 
@@ -90,6 +105,21 @@
                 height:3rem;
             }
         }
+
+        // #search {
+        //     display:flex;
+        //     order:1;
+        // }
+
+        // #upload {
+        //     display:flex;
+        //     order:3;
+        // }
+
+        // #user {
+        //     display:flex;
+        //     order:2;
+        // }
     }
 
     &__upload {
@@ -98,10 +128,15 @@
         border-radius:0.25rem;
         background-color:$blue;
         color:$white;
-        @include mobile_sectionheader;
+        @include mobile_label-buttons;
         font-family:avenir-bold;
         border:none;
         width:100%;
+        cursor:pointer;
+
+        &:hover {
+            background-color:$darkblue;
+        }
 
         @include tablet {
             display:none;

@@ -6,6 +6,10 @@
     margin:0 1rem;
     border-bottom:2px solid $mercury;
 
+    @include tablet {
+        margin:0 1.5rem;
+    }
+
     &__a {
         width:2.25rem;
         height:10rem;
@@ -54,6 +58,8 @@
             background:url(../../assets/icons/likes.svg) no-repeat 0 center;
             padding-left:1.5625rem;
             border:none;
+            font-family:avenir-regular;
+            @include mobile_bodycopy;
         }
     }
 }

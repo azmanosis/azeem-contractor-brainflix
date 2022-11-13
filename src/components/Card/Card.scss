@@ -4,11 +4,13 @@
     display:flex;
     justify-content:left;
     margin:1rem;
-    // width:100%;
     cursor:pointer;
 
+    @include tablet {
+        margin:1.5rem;
+    }
+
     &__container {
-        // width:80%;
 
         &--image {
             border-radius:.25rem;

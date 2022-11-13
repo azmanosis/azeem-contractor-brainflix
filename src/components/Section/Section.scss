@@ -1,10 +1,15 @@
 @use '../../styles/partials/' as *;
 
 .section {
-    font-family:avenir-regular;
-    margin:1rem;
+    margin:1.5rem 1rem 1rem 1rem;
+
+    @include tablet {
+        margin:2.25rem 1.5rem 1.5rem 1.5rem;
+    }
     
     &__title {
+        font-family:avenir-bold;
+        font-weight:700;
         @include mobile_pageheader;
         line-height:3.5rem;
         font-weight:700;
@@ -37,6 +42,7 @@
             }
 
             &--color {
+                font-family:avenir-regular;
                 @include mobile_sectionheader;
                 color:$silver;
             }
@@ -45,6 +51,7 @@
         &--b {
 
             &--eyecolor {
+                font-family:avenir-regular;
                 @include mobile_sectionheader;
                 color:$silver;
                 background:url(../../assets/icons/views.svg) no-repeat 0 center;
@@ -52,6 +59,7 @@
             }
 
             &--likes {
+                font-family:avenir-regular;
                 @include mobile_sectionheader;
                 color:$silver;
                 background:url(../../assets/icons/likes.svg) no-repeat 0 center;
@@ -61,6 +69,7 @@
     }
 
     &__comment {
+        @include mobile_bodycopy;
         font-family:avenir-regular;
         margin:1rem 0 0 0;
         font-weight:400;
