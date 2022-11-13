@@ -28,7 +28,6 @@
 
     &__heading {
         margin:0 2rem;
-        // overflow:hidden;
 
         @include tablet {
             margin:0 14rem 0 2rem;
@@ -45,8 +44,6 @@
             display:-webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient:vertical;
-            // white-space:nowrap;
-            // text-overflow:ellipsis;
             overflow:hidden;
 
             @include tablet {

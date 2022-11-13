@@ -107,7 +107,6 @@
     
                     &::placeholder {
                         color:$black;
-                        // padding-left:1rem;
                         @include mobile_bodycopy;
                         position:relative;
                         bottom:3.125rem;
