@@ -5,9 +5,9 @@ function Video (props) {
         <div className="container">
             <video poster={props.poster} className="container__video">
             </video>
-            <div className="container__controls">
+            {/* <div className="container__controls">
                 <div className="container__controls--button">
-                    <img className="container__controls--button--play"></img>
+                    <button className="container__controls--button--play"></button>
                 </div>
                 <div className="container__controls--timeline">
                     <div className="container__controls--timeline--bar">
@@ -15,10 +15,10 @@ function Video (props) {
                     </div>
                 </div>
                 <div className="container__controls--fullvolume">
-                    <img className="container__controls--fullvolume--fullscreen"></img>
-                    <img className="container__controls--fullvolume--volume"></img>
+                    <button className="container__controls--fullvolume--fullscreen"></button>
+                    <button className="container__controls--fullvolume--volume"></button>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

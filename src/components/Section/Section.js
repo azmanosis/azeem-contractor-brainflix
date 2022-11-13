@@ -1,6 +1,7 @@
 import './Section.scss';
 
 function Section(props) {
+    
     function date(timestamp) {
         const d = new Date(timestamp);
         return d.toLocaleDateString('en-US', {day:"2-digit", month:"2-digit", year:"numeric"});
@@ -9,24 +10,28 @@ function Section(props) {
     return (
         <div className = "section">
             <div>
-                <h1>{props.title}</h1>
+                <h1 className="section__title">{props.sections.title}</h1>
             </div>
-            <div>
-                <p>
-                    {props.channel}
-                </p>
-                <p>
-                    {date(props.timestamp)}
-                </p>
-                <p>
-                    {props.views}
-                </p>
-                <p>
-                    {props.likes}
-                </p>
+            <div className="section__container">
+                <div className="section__container--a">
+                    <p className="section__container--a--bold">
+                        {props.sections.channel}
+                    </p>  
+                    <p className="section__container--a--color">
+                        {date(props.sections.timestamp)}
+                    </p>
+                </div>
+                <div className="section__container--b">
+                    <p className="section__container--b--eyecolor">
+                        {props.sections.views}
+                    </p>
+                    <p className="section__container--b--likes">
+                        {props.sections.likes}
+                    </p>
+                </div>
             </div>
-            <div>
-                {props.description}
+            <div className="section__comment">
+                {props.sections.description}
             </div>
         </div>
     )

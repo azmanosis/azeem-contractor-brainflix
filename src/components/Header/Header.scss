@@ -41,10 +41,7 @@
 
         &--search {
             background-color:$white;
-            background-image:url(../../assets/icons/search.svg);
-            background-repeat:no-repeat;
-            background-position-x: 1rem;
-            background-position-y:center;
+            background:url(../../assets/icons/search.svg) no-repeat 1rem center;
             font-family:averegular;
             @include mobile_sectionheader;
             height:2.5rem;
@@ -66,10 +63,7 @@
 
             @include tablet {
                 visibility:visible;
-                background-image:url(../../assets/icons/upload.svg);
-                background-repeat:no-repeat;
-                background-position-x:5px;
-                background-position-y:center;
+                background:url(../../assets/icons/upload.svg) no-repeat .3125rem center;
                 padding-left:20px;
                 border-radius:0.25rem;
                 background-color:$blue;

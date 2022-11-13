@@ -1,4 +1,52 @@
+@use '../../styles/partials/' as *;
+
 .section {
-    font-family:avebold;
+    font-family:avenir-regular;
+    margin:1rem;
     
+    &__title {
+        font-family:avenir-bold;
+        border-bottom:0.2rem solid $mercury;
+        padding:0 0 1.5rem 0;
+    }
+
+    &__container {
+        display:flex;
+        justify-content:space-between;
+        border-bottom:0.2rem solid $mercury;
+
+        &--a {
+            
+            &--bold {
+                display:flex;
+                justify-content:left;
+                font-family:avenir-bold;
+                @include mobile_sectionheader;
+                font-weight:700;
+
+                @include tablet {
+                    @include desktop_sectionheader;
+                }
+            }
+
+            &--color {
+                color:$silver;
+            }
+        }
+
+        &--b {
+
+            &--eyecolor {
+                color:$silver;
+                background:url(../../assets/icons/views.svg) no-repeat 0 center;
+                padding-left:2rem;
+            }
+
+            &--likes {
+                color:$silver;
+                background:url(../../assets/icons/likes.svg) no-repeat 0 center;
+                padding-left:1.5rem;
+            }
+        }
+    }
 }

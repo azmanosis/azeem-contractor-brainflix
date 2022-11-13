@@ -1,3 +1,22 @@
-.width {
-    width:100%;
-}
+@use '../../styles/partials/' as *;
+
+// .width {
+//     width:100%;
+// }
+
+// .videos {
+//     width:100%;
+
+//     &__container {
+//         width:100%;
+//         cursor:pointer;
+
+//         &--image {
+//             width:100%;
+
+//             &--width {
+//                 width:100%;
+//             }
+//         }
+//     }
+// }
