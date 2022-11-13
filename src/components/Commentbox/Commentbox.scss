@@ -4,7 +4,7 @@
     margin:2rem 1rem 1rem 1rem;
 
     @include tablet {
-        margin:2rem 1.5rem 1rem 1.5rem;
+        margin:2rem 1.5rem 0 1.5rem;
     }
 
     &__text {
@@ -25,12 +25,16 @@
         padding:0 0 1rem 0;
 
         @include tablet {
-            // width:80rem;
+            padding:0 0 2rem 0;
+        }
+
+        @include desktop {
+            padding:0 1.5rem 2rem 0;
         }
 
         &--a {
             width:2.25rem;
-            height:50px;
+            height:3.125rem;
 
             @include tablet {
                 width:3rem;
@@ -117,7 +121,7 @@
     
                 &--button {
                     height:2.5rem;
-                    background:url(../../assets/icons/add_comment.svg) no-repeat 15px center;
+                    background:url(../../assets/icons/add_comment.svg) no-repeat .9375rem center;
                     border-radius:0.25rem;
                     background-color:$blue;
                     color:$white;

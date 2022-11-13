@@ -57,11 +57,17 @@ function App() {
       {/* Header */}
       <Header />
       <Video poster={videodetails.image}/>
-      <Section sections={videodetails}/>
-      <Commentbox commentlength={videodetails.comments.length} commentword={"Comments"}/>
-      <Comment comments={videodetails.comments} />
-      <p className="nextvideo">next videos</p>
-      <Nextvideo handleClickVideo={handleClickVideo} nextvideo={Data} activevideoid={videodetails.id}/> 
+      <div className="belowvideo">
+        <div className="belowvideo__sectioncomments">
+          <Section sections={videodetails}/>
+          <Commentbox commentlength={videodetails.comments.length} commentword={"Comments"}/>
+          <Comment comments={videodetails.comments} />
+        </div>
+        <div className="belowvideo__nextvideo">
+          <p className="belowvideo__nextvideo--text">next videos</p>
+          <Nextvideo handleClickVideo={handleClickVideo} nextvideo={Data} activevideoid={videodetails.id}/>
+        </div>
+      </div>
     </>
   )
 }

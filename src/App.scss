@@ -1,15 +1,35 @@
 @use '../src/styles/partials/' as *;
 
-.nextvideo {
-    margin:2rem 1rem;
-    text-transform:uppercase;
-    @include mobile_subheader;
-    font-family:avenir-bold;
-    font-weight:700;
-    color:$silver;
+.belowvideo {
+    
+    @include desktop {
+        display:flex;
+        justify-content:space-between;
+        margin:0 3rem;
+    }
 
-    @include tablet {
-        @include desktop_subheader;
-        margin:2rem 1.5rem;
+    &__sectioncomments {
+
+        @include desktop {
+            border-right:2px solid $mercury;
+        }
+
+    }
+
+    &__nextvideo {
+
+        &--text {
+            margin:2rem 1rem;
+            text-transform:uppercase;
+            @include mobile_subheader;
+            font-family:avenir-bold;
+            font-weight:700;
+            color:$silver;
+
+            @include tablet {
+                @include desktop_subheader;
+                margin:2rem 1.5rem;
+            }
+        }
     }
 }

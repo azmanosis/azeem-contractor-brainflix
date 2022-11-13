@@ -11,7 +11,7 @@
     }
 
     @include desktop {
-        margin:24px 48px 0 48px;
+        margin:1.5rem 3rem 1.5rem 3rem;
     }
 
     &__logo {
@@ -46,13 +46,14 @@
             @include mobile_sectionheader;
             height:2.5rem;
             border:solid 2px $mercury;
-            border-radius:4px;
+            border-radius:.25rem;
             width:65%;
             padding-left:2.5rem;
             color:$darkblack;
 
             @include tablet {
                 width:50%;
+                @include desktop_sectionheader;
             }
         }
 
@@ -74,11 +75,11 @@
             @include tablet {
                 visibility:visible;
                 background:url(../../assets/icons/upload.svg) no-repeat .3125rem center;
-                padding-left:20px;
+                padding-left:1.25rem;
                 border-radius:0.25rem;
                 background-color:$blue;
                 color:$white;
-                @include mobile_label-buttons;
+                @include desktop_label-buttons;
                 font-family:avenir-regular;
                 border:solid 2px $blue;
                 height:2.5rem;
@@ -125,7 +126,7 @@
 
     &__upload {
         height:2.5rem;
-        background:url(../../assets/icons/upload.svg) no-repeat 15px center;
+        background:url(../../assets/icons/upload.svg) no-repeat .9375rem center;
         border-radius:0.25rem;
         background-color:$blue;
         color:$white;

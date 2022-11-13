@@ -14,13 +14,13 @@
 
         &--image {
             border-radius:.25rem;
-            height:100px;
+            height:6.25rem;
             width:10rem;
             object-fit:cover;
             background-color:$mercury;
 
             @include tablet {
-                height:125px;
+                height:7.8125rem;
                 width:12rem;
             }
         }
@@ -32,6 +32,10 @@
 
         @include tablet {
             margin:0 14rem 0 2rem;
+        }
+
+        @include desktop {
+            margin:0 0 0 2rem;
         }
 
         &--title {

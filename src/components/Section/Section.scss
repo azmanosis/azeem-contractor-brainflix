@@ -6,6 +6,10 @@
     @include tablet {
         margin:2.25rem 1.5rem 1.5rem 1.5rem;
     }
+
+    @include desktop {
+        margin:2.25rem 0 1.5rem 1.5rem;
+    }
     
     &__title {
         font-family:avenir-bold;
@@ -27,6 +31,10 @@
             @include tablet {
                 border:none;
             }
+
+            @include desktop {
+                padding:0 1.5rem 1.5rem 0;
+            }
         }
     }
 
@@ -38,6 +46,11 @@
 
         @include tablet {
             padding-right:0;
+        }
+
+        @include desktop {
+            margin:0;
+            padding:0 1.5rem 0 0;
         }
 
         &--a {
@@ -113,6 +126,10 @@
 
         @include tablet {
             @include desktop_bodycopy;
+        }
+
+        @include desktop {
+            margin:1rem 1.5rem 0 0;
         }
     }
 }
