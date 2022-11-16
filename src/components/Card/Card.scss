@@ -1,0 +1,64 @@
+@use '../../styles/partials/' as *;
+
+.videos {
+    display:flex;
+    justify-content:left;
+    margin:1rem;
+    cursor:pointer;
+
+    @include tablet {
+        margin:1.5rem;
+    }
+
+    &__container {
+
+        &--image {
+            border-radius:.25rem;
+            height:6.25rem;
+            width:10rem;
+            object-fit:cover;
+            background-color:$mercury;
+
+            @include tablet {
+                height:7.8125rem;
+                width:12rem;
+            }
+        }
+    }
+
+    &__heading {
+        margin:0 2rem;
+
+        @include tablet {
+            margin:0 14rem 0 2rem;
+        }
+
+        @include desktop {
+            margin:0 0 0 2rem;
+        }
+
+        &--title {
+            font-family:avenir-bold;
+            @include mobile_pageheader;
+            margin:0;
+            display:-webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient:vertical;
+            overflow:hidden;
+
+            @include tablet {
+                @include desktop_pageheader;
+            }
+        }
+
+        &--channel {
+            font-family:avenir-bold;
+            @include mobile_subheader;
+            margin:0.5rem 0 0 0;
+
+            @include tablet {
+                @include desktop_subheader;
+            }
+        }
+    }
+}

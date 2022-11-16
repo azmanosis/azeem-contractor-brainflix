@@ -1,0 +1,122 @@
+@use '../../styles/partials/' as *;
+
+.header {
+    margin:1rem;
+
+    @include tablet {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin:1.5rem;
+    }
+
+    @include desktop {
+        margin:1.5rem 3rem 1.5rem 3rem;
+    }
+
+    &__logo {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        &--height {
+            height:1.5625rem;
+        }
+    }
+
+    &__navigation {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin:1rem 0;
+
+        @include tablet {
+            margin:0;
+            width:65%;
+        }
+
+        @include desktop {
+            width:50%;
+        }
+
+        &--search {
+            background-color:$white;
+            background:url(../../assets/icons/search.svg) no-repeat 1rem center;
+            font-family:avenir-regular;
+            @include mobile_sectionheader;
+            height:2.5rem;
+            border:solid 2px $mercury;
+            border-radius:.25rem;
+            width:65%;
+            padding-left:2.5rem;
+            color:$darkblack;
+
+            @include tablet {
+                width:50%;
+                @include desktop_sectionheader;
+            }
+        }
+
+        &--upload {
+            visibility:hidden;
+            width:0.1px;
+            height:0.1px;
+
+            @include tablet {
+                visibility:visible;
+                background:url(../../assets/icons/upload.svg) no-repeat .3125rem center;
+                padding-left:1.25rem;
+                border-radius:0.25rem;
+                background-color:$blue;
+                color:$white;
+                @include desktop_label-buttons;
+                font-family:avenir-regular;
+                border:solid 2px $blue;
+                height:2.5rem;
+                width:25%;
+                cursor:pointer;
+
+                &:hover {
+                    background-color:$darkblue;
+                    border:solid 2px $darkblue;
+                }
+            }
+        }
+
+        &--user {
+            height:2.25rem;
+            width:2.25rem;
+            border-radius:50%;
+            background-image:url(../../assets/images/Mohan-muruge.jpg);
+            background-color:$mercury;
+            background-position:contain;
+            background-size:cover;
+
+            @include tablet {
+                width:3rem;
+                height:3rem;
+            }
+        }
+    }
+
+    &__upload {
+        height:2.5rem;
+        background:url(../../assets/icons/upload.svg) no-repeat .9375rem center;
+        border-radius:0.25rem;
+        background-color:$blue;
+        color:$white;
+        @include mobile_label-buttons;
+        font-family:avenir-bold;
+        border:none;
+        width:100%;
+        cursor:pointer;
+
+        &:hover {
+            background-color:$darkblue;
+        }
+
+        @include tablet {
+            display:none;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+@use '../../styles/partials/' as *;
+
+.comment {
+    display:flex;
+    justify-content:left;
+    margin:0 1rem;
+    border-bottom:2px solid $mercury;
+
+    @include tablet {
+        margin:0 1.5rem;
+    }
+
+    @include desktop {
+        margin: 0 0 0 1.5rem;
+        padding:0 1.5rem 0 0;
+    }
+
+    &__a {
+        width:2.25rem;
+        height:5rem;
+
+        @include tablet {
+            width:3rem;
+        }
+
+        &--image {
+            width:2.25rem;
+            height:2.25rem;
+            border-radius:50%;
+            background-color:$mercury;
+            margin:0.8rem 0 0 0;
+
+            @include tablet {
+                width:3rem;
+                height:3rem;
+            }
+        }
+    }
+
+    &__b {
+        margin:0 0 1rem 1rem;
+
+        @include tablet {
+            margin:0 0 1.5rem 1.5rem;
+            width:100vw;
+        }
+
+        @include desktop {
+            width:40vw;
+        }
+
+        &--container {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin:0 0 1rem 0;
+            padding:0;
+
+            @include tablet {
+                margin:0 0 1rem 0;
+            }
+
+            @include desktop {
+                margin:1.5rem 0 1rem 0;
+            }
+
+            &--name {
+                font-family:avenir-bold;
+                font-weight:700;
+                @include mobile_subheader;
+
+                @include tablet {
+                    @include desktop_subheader;
+                }
+
+                @include desktop {
+                    margin:0;
+                }
+            }
+
+            &--timestamp {
+                font-family:avenir-regular;
+                font-weight:400;
+                color:$silver;
+                @include mobile_subheader;
+
+                @include tablet {
+                    @include desktop_subheader;
+                }
+
+                @include desktop {
+                    margin:0;
+                }
+            }
+        }
+
+        &--comments {
+            font-family:avenir-regular;
+            font-weight:400;
+            @include mobile_bodycopy;
+
+            @include tablet {
+                @include desktop_bodycopy;
+                padding:0;
+                margin-top:0;
+            }
+        }
+
+        &--likes {
+            color:$silver;
+            background:url(../../assets/icons/likes.svg) no-repeat 0 center;
+            padding-left:1.5625rem;
+            border:none;
+            font-family:avenir-regular;
+            @include mobile_bodycopy;
+
+            @include tablet {
+                @include desktop_bodycopy;
+            }
+        }
+    }
+}
