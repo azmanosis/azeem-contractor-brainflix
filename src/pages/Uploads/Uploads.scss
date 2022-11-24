@@ -1,0 +1,138 @@
+@use "../../styles/partials/" as *;
+
+.upload {
+  margin: 1rem;
+
+  &__title {
+    @include mobile_pageheader;
+    font-family: avenir-bold;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+
+  &__thumbnail {
+    &--words {
+      @include mobile_subheader;
+      font-family: avenir-regular;
+      color: $silver;
+      text-transform: uppercase;
+      margin: 0.5rem 0;
+    }
+
+    &--image {
+      background-color: $mercury;
+      width: 100%;
+      border-radius: 0.25rem;
+    }
+  }
+
+  &__comments {
+    margin-top: 1rem;
+
+    &--a {
+      @include mobile_subheader;
+      font-family: avenir-regular;
+      color: $silver;
+      text-transform: uppercase;
+      //   display: flex;
+      //   justify-content: flex-end;
+
+      &--title {
+        padding-right: 50%;
+      }
+
+      &--input {
+        box-sizing: border-box;
+        border-radius: 0.25rem;
+        border: solid 2px $mercury;
+        width: 100%;
+        background-color: $alabaster;
+        margin: 0.25rem 0 0 0;
+        height: 2rem;
+        padding-left: 0.75rem;
+
+        &::placeholder {
+          vertical-align: top;
+          color: $black;
+          @include mobile_bodycopy;
+          text-transform: capitalize;
+          font-family: avenir-regular;
+          line-height: 1.2rem;
+        }
+      }
+    }
+
+    &--b {
+      @include mobile_subheader;
+      font-family: avenir-regular;
+      color: $silver;
+      text-transform: uppercase;
+      margin-top: 1rem;
+
+      &--title {
+        padding-right: 50%;
+      }
+
+      &--input {
+        box-sizing: border-box;
+        border-radius: 0.25rem;
+        border: solid 2px $mercury;
+        width: 100%;
+        background-color: $alabaster;
+        margin: 0.25rem 0 0 0;
+        height: 8rem;
+        text-align: left;
+        vertical-align: top;
+        padding-left: 0.75rem;
+        line-height: 1.2rem;
+
+        &::placeholder {
+          vertical-align: top;
+          color: $black;
+          @include mobile_bodycopy;
+          text-transform: capitalize;
+          font-family: avenir-regular;
+          line-height: 1.2rem;
+        }
+      }
+    }
+
+    &--publish {
+      margin-top: 2rem;
+      @include mobile_label-buttons;
+      height: 2.5rem;
+      background: url(../../assets/icons/publish.svg) no-repeat 0.9375rem center;
+      border-radius: 0.25rem;
+      background-color: $blue;
+      color: $white;
+      font-family: avenir-bold;
+      //   border: solid 2px $blue;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      text-transform: uppercase;
+      padding: 0;
+
+      &:hover {
+        background-color: $darkblue;
+      }
+    }
+  }
+
+  &__cancel {
+    // height: 2.5rem;
+    // width: 100vw;
+
+    &--button {
+      margin-top: 1rem;
+      border: none;
+      color: $blue;
+      background-color: $white;
+      width: 100%;
+      padding: 0;
+      height: 2.5rem;
+      @include mobile_label-buttons;
+      text-transform: uppercase;
+    }
+  }
+}
