@@ -2,7 +2,6 @@
 
 .upload {
   border-top: 2px solid $mercury;
-  // border-top-width: 100%;
 
   &__title {
     margin: 1rem;
@@ -20,152 +19,223 @@
     }
   }
 
-  &__thumbnail {
-    margin: 1rem;
+  &__section {
+    display: flex;
+    flex-flow: column;
 
-    @include tablet {
-      margin: 0 2rem;
+    @include desktop {
+      flex-flow: row;
     }
 
-    &--words {
-      @include mobile_subheader;
-      font-family: avenir-regular;
-      color: $silver;
-      text-transform: uppercase;
-      margin: 0.5rem 0;
+    &--thumbnail {
+      margin: 0 1rem 1rem 1rem;
 
       @include tablet {
-        @include desktop_subheader;
-      }
-    }
-
-    &--image {
-      background-color: $mercury;
-      width: 100%;
-      border-radius: 0.25rem;
-
-      @include tablet {
-        width: 50%;
-      }
-    }
-  }
-
-  &__comments {
-    margin: 1rem 1rem 0 1rem;
-
-    @include tablet {
-      margin: 2rem 2rem 0 2rem;
-    }
-
-    &--a {
-      @include mobile_subheader;
-      font-family: avenir-regular;
-      color: $silver;
-      text-transform: uppercase;
-
-      // &::first-letter {
-      //   text-transform: uppercase;
-      // }
-
-      @include tablet {
-        @include desktop_subheader;
+        margin: 0 2rem;
       }
 
-      &--title {
-        padding-right: 50%;
+      @include desktop {
+        margin: 0 0 1rem 2rem;
+        width: 25%;
       }
 
-      &--input {
-        box-sizing: border-box;
-        border-radius: 0.25rem;
-        border: solid 2px $mercury;
+      &--words {
+        @include mobile_subheader;
+        font-family: avenir-regular;
+        color: $silver;
+        text-transform: uppercase;
+        margin: 0.5rem 0;
+
+        @include tablet {
+          @include desktop_subheader;
+        }
+      }
+
+      &--image {
+        background-color: $mercury;
         width: 100%;
-        background-color: $alabaster;
-        margin: 0.25rem 0 0 0;
-        height: 2rem;
-        padding-left: 0.75rem;
+        border-radius: 0.25rem;
 
-        &::placeholder {
-          color: $black;
-          @include mobile_bodycopy;
-          font-family: avenir-regular;
-          line-height: 1.2rem;
-          text-transform: lowercase;
+        @include tablet {
+          width: 50%;
+        }
+
+        @include desktop {
+          width: 100%;
         }
       }
     }
 
-    &--b {
-      @include mobile_subheader;
-      font-family: avenir-regular;
-      color: $silver;
-      text-transform: uppercase;
-      margin-top: 1rem;
+    &--comments {
+      margin: 1rem 1rem 0 1rem;
 
-      &--title {
-        padding-right: 50%;
+      @include tablet {
+        margin: 1rem 2rem 0 2rem;
       }
 
-      &--input {
-        box-sizing: border-box;
-        border-radius: 0.25rem;
-        border: solid 2px $mercury;
-        width: 100%;
-        background-color: $alabaster;
-        margin: 0.25rem 0 0 0;
-        height: 8rem;
-        text-align: left;
-        vertical-align: top;
-        padding-left: 0.75rem;
-        line-height: 1.2rem;
+      @include desktop {
+        width: 70vw;
+      }
 
-        &::placeholder {
+      &--a {
+        @include mobile_subheader;
+        font-family: avenir-regular;
+        color: $silver;
+        text-transform: uppercase;
+
+        // &::first-letter {
+        //   text-transform: uppercase;
+        // }
+
+        @include tablet {
+          @include desktop_subheader;
+        }
+
+        &--title {
+          padding-right: 50%;
+        }
+
+        &--input {
+          box-sizing: border-box;
+          border-radius: 0.25rem;
+          border: solid 2px $mercury;
+          width: 100%;
+          background-color: $alabaster;
+          margin: 0.25rem 0 0 0;
+          height: 2rem;
+          padding-left: 0.75rem;
+
+          &::placeholder {
+            color: $black;
+            @include mobile_bodycopy;
+            font-family: avenir-regular;
+            line-height: 1.2rem;
+            text-transform: lowercase;
+          }
+        }
+      }
+
+      &--b {
+        @include mobile_subheader;
+        font-family: avenir-regular;
+        color: $silver;
+        text-transform: uppercase;
+        margin-top: 1rem;
+
+        @include tablet {
+          border-bottom: 2px solid $mercury;
+          padding-bottom: 2rem;
+        }
+
+        @include desktop {
+          border-bottom: 2px solid $white;
+        }
+
+        &--title {
+          padding-right: 25%;
+        }
+
+        &--input {
+          box-sizing: border-box;
+          border-radius: 0.25rem;
+          border: solid 2px $mercury;
+          width: 100%;
+          background-color: $alabaster;
+          margin: 0.25rem 0 0 0;
+          height: 8rem;
+          text-align: left;
           vertical-align: top;
-          color: $black;
-          @include mobile_bodycopy;
-          text-transform: capitalize;
-          font-family: avenir-regular;
+          padding-left: 0.75rem;
           line-height: 1.2rem;
+
+          &::placeholder {
+            vertical-align: top;
+            color: $black;
+            @include mobile_bodycopy;
+            text-transform: capitalize;
+            font-family: avenir-regular;
+            line-height: 1.2rem;
+          }
+        }
+      }
+
+      &--link {
+        display: flex;
+        flex-flow: column;
+
+        @include tablet {
+          flex-flow: row-reverse;
+        }
+        // align-items: center;
+
+        &--publish {
+          margin-top: 2rem;
+          @include mobile_label-buttons;
+          height: 2.5rem;
+          background: url(../../assets/icons/publish.svg) no-repeat 0.9375rem
+            center;
+          border-radius: 0.25rem;
+          background-color: $blue;
+          color: $white;
+          font-family: avenir-bold;
+          //   border: solid 2px $blue;
+          border: none;
+          width: 100%;
+          cursor: pointer;
+          text-transform: uppercase;
+          padding: 0;
+
+          @include tablet {
+            width: 9.375rem;
+            margin-left: 2rem;
+          }
+
+          &:hover {
+            background-color: $darkblue;
+          }
+        }
+
+        &--cancel {
+          margin: 1rem 0 0 0;
+          height: 2.5rem;
+          width: 100%;
+
+          @include tablet {
+            margin-top: 2rem;
+            width: 9.375rem;
+          }
+
+          &--button {
+            border: none;
+            color: $blue;
+            background-color: $white;
+            width: 100%;
+            padding: 0;
+            height: 2.5rem;
+            @include mobile_label-buttons;
+            text-transform: uppercase;
+            cursor: pointer;
+            // margin: 0;
+          }
         }
       }
     }
-
-    &--publish {
-      margin-top: 2rem;
-      @include mobile_label-buttons;
-      height: 2.5rem;
-      background: url(../../assets/icons/publish.svg) no-repeat 0.9375rem center;
-      border-radius: 0.25rem;
-      background-color: $blue;
-      color: $white;
-      font-family: avenir-bold;
-      //   border: solid 2px $blue;
-      border: none;
-      width: 100%;
-      cursor: pointer;
-      text-transform: uppercase;
-      padding: 0;
-
-      &:hover {
-        background-color: $darkblue;
-      }
-    }
   }
 
-  &__cancel {
-    height: 2.5rem;
-    width: 100vw;
+  // &__cancel {
+  //   height: 2.5rem;
+  //   width: 100vw;
 
-    &--button {
-      margin-top: 1rem;
-      border: none;
-      color: $blue;
-      background-color: $white;
-      width: 100%;
-      padding: 0;
-      height: 2.5rem;
-      @include mobile_label-buttons;
-      text-transform: uppercase;
-    }
-  }
+  //   &--button {
+  //     margin-top: 1rem;
+  //     border: none;
+  //     color: $blue;
+  //     background-color: $white;
+  //     width: 100%;
+  //     padding: 0;
+  //     height: 2.5rem;
+  //     @include mobile_label-buttons;
+  //     text-transform: uppercase;
+  //   }
+  // }
 }
