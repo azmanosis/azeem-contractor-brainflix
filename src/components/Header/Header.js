@@ -11,15 +11,14 @@ function Header() {
                 </div>
             </Link>
             <div className="header__navigation">
-                <input id="search" className="header__navigation--search" placeholder='Search'></input>
-                <Link to="/upload">
-                    <button id="upload" className='header__navigation--upload'>UPLOAD</button>
+                <div className="header__navigation--flex">
+                    <input id="search" className='header__navigation--flex--search' placeholder='Search'></input>
+                    <div id="user" className='header__navigation--flex--user' alt='user'></div>
+                </div>
+                <Link to="/upload" className="header__navigation--upload">
+                    <button id="upload" className='header__navigation--upload--button'>UPLOAD</button>
                 </Link>
-                <div id="user" className='header__navigation--user' alt='user'></div>
             </div>
-            <Link to="/upload">
-                <button className='header__upload'>UPLOAD</button>
-            </Link>
         </div>
     )
 }
