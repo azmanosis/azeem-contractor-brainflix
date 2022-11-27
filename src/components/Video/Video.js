@@ -1,13 +1,24 @@
 import './Video.scss';
+import { useState } from 'react';
+import play from '../../assets/icons/play.svg';
+import pause from '../../assets/icons/pause.svg';
 
-function Video (props) {
+function Video(props) {
+
+    // let name = 'play';
+    const [name, setName] = useState(play);
+
+    const handleClick = () => {
+        setName(pause);
+    }
+
     return (
         <div className="container">
             <video poster={props.poster} className="container__video">
             </video>
             <div className="container__controls">
                 <div className="container__controls--button">
-                    <button className="container__controls--button--play"></button>
+                    <button onClick={handleClick} className="container__controls--button--play">{name}</button>
                 </div>
                 <div className="container__controls--timeline">
                     <div className="container__controls--timeline--bar">
