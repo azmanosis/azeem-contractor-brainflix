@@ -8,6 +8,17 @@ import Comment from '../../components/Comments/Comments';
 import Nextvideo from '../../components/Nextvideo/Nextvideo';
 import Data from '../../data/video-details.json';
 
+// Make API call and use params
+import { useParams } from 'react-router-dom';
+
+
+// function to use params from api videoId
+function VideoId() {
+    const params = useParams();
+    return <div>{params.videoId}</div>
+}
+
+// Sprint-1 components
 const Home = () => {
 
     const [videodetails, setVideoDetails] = useState(Data[0]);

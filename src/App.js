@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/upload" element={<Uploads />} />
+          <Route path="/:videoId" element={<VideoId />} />;
         </Routes>
       </BrowserRouter>
     </>
