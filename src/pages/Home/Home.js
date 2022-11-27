@@ -10,6 +10,7 @@ import Data from '../../data/video-details.json';
 
 // Make API call and use params
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 
 // function to use params from api videoId
@@ -17,6 +18,40 @@ function VideoId() {
     const params = useParams();
     return <div>{params.videoId}</div>
 }
+
+let apiKey = '';
+
+function getApiKey() {
+    if (apiKey = '') {
+        let userURL = "https://project-2-api.herokuapp.com/register";
+        return axios.get(userURL).then((response) => {
+            apiKey = response.data.api_key;
+            return Promise.resolve(apiKey)
+        })
+    } else {
+        return Promise.resolve(apiKey)
+    }
+}
+
+getVideoData()
+
+axios.get("https://project-2-api.herokuapp.com/register").then((response) => {
+    apiKey = response.data.api_key;
+    return apiKey
+}).then((apiKey) => {
+    axios.get(`https://project-2-api.herokuapp.com/videos?api_key=${apiKey}/`)
+        .then((response) => console.log(response));
+}).catch(error => console.log(error));
+
+function getVideoData() {
+    getApiKey().then((apiKey) => axios.get(`https://project-2-api.herokuapp.com/videos?api_key=${apiKey}/`))
+        .then((response) => {
+            videodetails = response.data
+            Infinity(videodetails)
+        }).catch(error => console.log(error));
+}
+
+let videodetails = []
 
 // Sprint-1 components
 const Home = () => {
