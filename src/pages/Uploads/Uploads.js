@@ -19,11 +19,11 @@ const Uploads = () => {
                     <form id="publish" className="upload__section--comments">
                         <div className="upload__section--comments--a">
                             <label className="upload__section--comments--a--title" for="video title">title your video</label>
-                            <input id="enter__video__title" className="upload__section--comments--a--input" type="text" value="" placeholder="add a title to your video"></input>
+                            <input id="enter__video__title" className="upload__section--comments--a--input" type="text" value="" placeholder="Add a title to your video"></input>
                         </div>
                         <div className="upload__section--comments--b">
                             <label className="upload__section--comments--b--title" for="video title">add a video description</label>
-                            <textarea id="enter__video__title" className="upload__section--comments--b--input" type="text" placeholder="add a description to your video"></textarea>
+                            <textarea id="enter__video__title" className="upload__section--comments--b--input" type="text" placeholder="Add a description to your video"></textarea>
                         </div>
                         <div className="upload__section--comments--link">
                             <button className="upload__section--comments--link--publish">publish</button>
