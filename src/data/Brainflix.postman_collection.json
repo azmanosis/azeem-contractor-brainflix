@@ -1,0 +1,411 @@
+{
+	"info": {
+		"_postman_id": "1e6badcf-f113-4263-b114-c5c35ae58258",
+		"name": "Brainflix",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23745223"
+	},
+	"item": [
+		{
+			"name": "Videos",
+			"item": [
+				{
+					"name": "BMX Rampage: 2021 Highlights",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=ce6162de-a18f-4f0a-a1d8-43900ef59215",
+							"protocol": "https",
+							"host": [
+								"project-2-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"videos",
+								"84e96018-4022-434e-80bf-000ce4cd12b8"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "ce6162de-a18f-4f0a-a1d8-43900ef59215",
+									"description": "Returned Side Bar Videos"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Become A Travel Pro In One Easy Lesson",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://project-2-api.herokuapp.com/videos/c05b9a93-8682-4ab6-aff2-92ebb4bbfc14?api_key=ce6162de-a18f-4f0a-a1d8-43900ef59215",
+							"protocol": "https",
+							"host": [
+								"project-2-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"videos",
+								"c05b9a93-8682-4ab6-aff2-92ebb4bbfc14"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "ce6162de-a18f-4f0a-a1d8-43900ef59215",
+									"description": "Returned Side Bar Videos"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Les Houches The Hidden Gem Of The Chamonix",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://project-2-api.herokuapp.com/videos/25ce5d91-a262-4dcf-bb87-42b87546bcfa?api_key=ce6162de-a18f-4f0a-a1d8-43900ef59215",
+							"protocol": "https",
+							"host": [
+								"project-2-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"videos",
+								"25ce5d91-a262-4dcf-bb87-42b87546bcfa"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "ce6162de-a18f-4f0a-a1d8-43900ef59215",
+									"description": "Returned Side Bar Videos"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Travel Health Useful Medical Information For",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://project-2-api.herokuapp.com/videos/25ce5d91-a262-4dcf-bb87-42b87546bcfa?api_key=ce6162de-a18f-4f0a-a1d8-43900ef59215",
+							"protocol": "https",
+							"host": [
+								"project-2-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"videos",
+								"25ce5d91-a262-4dcf-bb87-42b87546bcfa"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "ce6162de-a18f-4f0a-a1d8-43900ef59215",
+									"description": "Returned Side Bar Videos"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cheap Airline Tickets Great Ways To Save",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://project-2-api.herokuapp.com/videos/1b964601-a6dd-4fcc-b5f3-1000338c9557?api_key=ce6162de-a18f-4f0a-a1d8-43900ef59215",
+							"protocol": "https",
+							"host": [
+								"project-2-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"videos",
+								"1b964601-a6dd-4fcc-b5f3-1000338c9557"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "ce6162de-a18f-4f0a-a1d8-43900ef59215",
+									"description": "Returned Side Bar Videos"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Take A Romantic Break In A Boutique Hotel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://project-2-api.herokuapp.com/videos/9c268c0a-83dc-4b96-856a-bb5ded2772b1?api_key=ce6162de-a18f-4f0a-a1d8-43900ef59215",
+							"protocol": "https",
+							"host": [
+								"project-2-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"videos",
+								"9c268c0a-83dc-4b96-856a-bb5ded2772b1"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "ce6162de-a18f-4f0a-a1d8-43900ef59215",
+									"description": "Returned Side Bar Videos"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Choose the Perfect Accommodations",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://project-2-api.herokuapp.com/videos/fc5261d1-58a0-47e4-9c19-2b7a1715fa1b?api_key=ce6162de-a18f-4f0a-a1d8-43900ef59215",
+							"protocol": "https",
+							"host": [
+								"project-2-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"videos",
+								"fc5261d1-58a0-47e4-9c19-2b7a1715fa1b"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "ce6162de-a18f-4f0a-a1d8-43900ef59215",
+									"description": "Returned Side Bar Videos"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cruising Destination Ideas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://project-2-api.herokuapp.com/videos/99478bed-6428-49ed-8eaa-f245a5414336?api_key=ce6162de-a18f-4f0a-a1d8-43900ef59215",
+							"protocol": "https",
+							"host": [
+								"project-2-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"videos",
+								"99478bed-6428-49ed-8eaa-f245a5414336"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "ce6162de-a18f-4f0a-a1d8-43900ef59215",
+									"description": "Returned Side Bar Videos"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Train Travel On Track For Safety",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://project-2-api.herokuapp.com/videos/76ca28c0-7dea-4553-887f-8e5129a80fc3?api_key=ce6162de-a18f-4f0a-a1d8-43900ef59215",
+							"protocol": "https",
+							"host": [
+								"project-2-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"videos",
+								"76ca28c0-7dea-4553-887f-8e5129a80fc3"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "ce6162de-a18f-4f0a-a1d8-43900ef59215",
+									"description": "Returned Side Bar Videos"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get API Key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://project-2-api.herokuapp.com/register",
+					"protocol": "https",
+					"host": [
+						"project-2-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Side Bar videos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://project-2-api.herokuapp.com/videos?api_key=ce6162de-a18f-4f0a-a1d8-43900ef59215",
+					"protocol": "https",
+					"host": [
+						"project-2-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"videos"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "ce6162de-a18f-4f0a-a1d8-43900ef59215",
+							"description": "Returned Side Bar Videos"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API Error",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://project-2-api.herokuapp.com/videos/:id?api_key=ce6162de-a18f-4f0a-a1d8-43900ef59215",
+					"protocol": "https",
+					"host": [
+						"project-2-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"videos",
+						":id"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "ce6162de-a18f-4f0a-a1d8-43900ef59215",
+							"description": "Returned Side Bar Videos"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
