@@ -1,37 +1,67 @@
 import './Home.scss';
 import Header from '../../components/Header/Header';
 import Video from '../../components/Video/Video';
-import { useState, useEffect } from 'react';
 import Section from '../../components/Section/Section';
 import Commentbox from '../../components/Commentbox/Commentbox';
 import Comment from '../../components/Comments/Comments';
 import Nextvideo from '../../components/Nextvideo/Nextvideo';
 // import Data from '../../data/video-details.json';
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 
 // Sprint-1 components
 const Home = () => {
-    const { id } = useParams()
+    const id = useParams()
     const url = `https://project-2-api.herokuapp.com/videos?api_key=ce6162de-a18f-4f0a-a1d8-43900ef59215`;
     const [videos, setVideos] = useState(null);
 
-
     let content = null
-
-
 
     useEffect(() => {
         axios.get(url)
             .then(response => {
                 setVideos(response.data)
             })
-        console.log(videos)
+            .catch(err => console.log(err))
     }, [url]);
 
+    console.log(videos)
 
+    if (videos) {
+
+        const handleClickVideo = (id) => {
+            videos.map(details => {
+                if (details.id === id) {
+                    setVideos(details)
+                }
+            })
+        }
+
+        return
+        // videos &&
+        <>
+            {/* Header */}
+            < Header />
+            <Video poster={videos.image} />
+            <div className="belowvideo">
+                <div className="belowvideo__sectioncomments">
+                    <Section sections={videos} />
+                    <Commentbox commentlength={videos.comments.length} commentword={"Comments"} />
+                    <Comment comments={videos.comments} />
+                </div>
+                <div className="belowvideo__nextvideo">
+                    <p className="belowvideo__nextvideo--text">next videos</p>
+                    <Nextvideo handleClickVideo={handleClickVideo} nextvideo={videos} activevideoid={videos.id} />
+                </div>
+            </div>
+        </>
+    }
+
+    return (
+        <div>{content}</div>
+    )
     // state = {
     //     videos: [],
     //     activeVideo: null,
@@ -71,51 +101,22 @@ const Home = () => {
     //   }
 
 
-    if (videos) {
 
-        const handleClickVideo = (id) => {
-            videos.map(details => {
-                if (details.id === id) {
-                    setVideos(details)
-                }
-            })
-        }
 
-        // code from Fahd
-        //Create a method to fetch matching id video
-        //   fetchVideo = (videoId) => {
-        //     axios
-        //       .get(`…/videos/${videoId}`)
-        //       .then((response) =>
-        //         this.setState({
-        //           selectedMovie: response.data,
-        //         })
-        //       )
-        //       .catch((err) => console.error(err));
-        //   };
-        // Add turnery && 
-        return
-        <>
-            {/* Header */}
-            < Header />
-            <Video poster={videos.image} />
-            <div className="belowvideo">
-                <div className="belowvideo__sectioncomments">
-                    <Section sections={videos} />
-                    <Commentbox commentlength={videos.comments.length} commentword={"Comments"} />
-                    <Comment comments={videos.comments} />
-                </div>
-                <div className="belowvideo__nextvideo">
-                    <p className="belowvideo__nextvideo--text">next videos</p>
-                    <Nextvideo handleClickVideo={handleClickVideo} nextvideo={videos} activevideoid={videos.id} />
-                </div>
-            </div>
-        </>
-    }
+    // code from Fahd
+    //Create a method to fetch matching id video
+    //   fetchVideo = (videoId) => {
+    //     axios
+    //       .get(`…/videos/${videoId}`)
+    //       .then((response) =>
+    //         this.setState({
+    //           selectedMovie: response.data,
+    //         })
+    //       )
+    //       .catch((err) => console.error(err));
+    //   };
+    // Add turnery && 
 
-    return (
-        <div>{content}</div>
-    )
 
 
     // Sprint 1 from Below
