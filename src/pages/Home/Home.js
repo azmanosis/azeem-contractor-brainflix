@@ -16,9 +16,8 @@ import { useParams } from 'react-router-dom';
 const Home = () => {
     const { id } = useParams()
     const url = `https://project-2-api.herokuapp.com/videos?api_key=ce6162de-a18f-4f0a-a1d8-43900ef59215`;
-    // const urls = `https://project-2-api.herokuapp.com/videos/${id}?api_key=ce6162de-a18f-4f0a-a1d8-43900ef59215`;
     const [videos, setVideos] = useState(null);
-    // const [selectedvideo, setSelectedVideo] = useState(null);
+
 
     let content = null
 
@@ -29,19 +28,8 @@ const Home = () => {
             .then(response => {
                 setVideos(response.data)
             })
-
-        // getVideoById(videoId) {
-        // axios.get(urls)
-        //     .then(response => {
-        //         setSelectedVideo(response.videos.id)
-        //     })
-
-        // console.log(getVideoById)
-    }
-        // check url to display the correct video
-        // const currentVideoId = id || videos[0].id
-        // setSelectedVideo(currentVideoId)
-        , [url]);
+        console.log(videos)
+    }, [url]);
 
 
     // state = {
