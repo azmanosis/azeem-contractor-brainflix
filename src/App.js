@@ -1,5 +1,5 @@
 import './App.scss';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Uploads from './pages/Uploads/Uploads';
 
@@ -9,9 +9,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Navigate to="/videos/84e96018-4022-434e-80bf-000ce4cd12b8" />} />
           <Route path="/upload" element={<Uploads />} />
-          <Route path="/:id" element={<Home />} />
+          <Route path="/videos/:videoId" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </>
