@@ -37,17 +37,17 @@ const Home = () => {
         axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=` + APIkey)
             .then(response => {
                 setActivevideo(response.data)
-                // console.log(response.data)
+                console.log(response.data)
             });
     }, [APIkey, videoId])
 
-    const handleClickVideo = (id) => {
-        activevideo.map(details => {
-            if (details.id === id) {
-                setVideos(details)
-            }
-        })
-    }
+    // const handleClickVideo = (id) => {
+    //     Data.map(details => {
+    //         if (details.id === id) {
+    //             setVideos(details)
+    //         }
+    //     })
+    // }
 
     return (
         <div>
@@ -63,7 +63,7 @@ const Home = () => {
                 </div>
                 <div className="belowvideo__nextvideo">
                     <p className="belowvideo__nextvideo--text">next videos</p>
-                    <Nextvideo handleClickVideo={handleClickVideo} nextvideo={activevideo} activevideoid={activevideo.id} />
+                    <Nextvideo nextvideo={videos} activevideoid={activevideo.id} />
                 </div>
             </div>
         </div>
