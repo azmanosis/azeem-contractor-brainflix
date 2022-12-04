@@ -7,7 +7,7 @@
     margin: 1rem;
     @include mobile_pageheader;
     font-family: avenir-bold;
-    text-transform: lowercase;
+    text-transform: capitalize;
     font-weight: 700;
 
     @include tablet {
@@ -37,6 +37,7 @@
       @include desktop {
         margin: 0 0 1rem 2rem;
         width: 25%;
+        // height: 10rem;
       }
 
       &--words {
@@ -81,11 +82,7 @@
         @include mobile_subheader;
         font-family: avenir-regular;
         color: $silver;
-        text-transform: lowercase;
-
-        // &::first-letter {
-        //   text-transform: lowercase;
-        // }
+        text-transform: uppercase;
 
         @include tablet {
           @include desktop_subheader;
@@ -110,7 +107,6 @@
             @include mobile_bodycopy;
             font-family: avenir-regular;
             line-height: 1.2rem;
-            text-transform: lowercase;
           }
         }
       }
@@ -119,11 +115,10 @@
         @include mobile_subheader;
         font-family: avenir-regular;
         color: $silver;
-        text-transform: lowercase;
+        text-transform: uppercase;
         margin-top: 1rem;
 
         @include tablet {
-          border-bottom: 2px solid $mercury;
           padding-bottom: 2rem;
         }
 
@@ -150,7 +145,6 @@
           &::placeholder {
             color: $black;
             @include mobile_bodycopy;
-            text-transform: lowercase;
             font-family: avenir-regular;
             line-height: 1.2rem;
           }
@@ -162,9 +156,9 @@
         flex-flow: column;
 
         @include tablet {
+          border-top: 2px solid $mercury;
           flex-flow: row-reverse;
         }
-        // align-items: center;
 
         &--publish {
           margin-top: 2rem;
