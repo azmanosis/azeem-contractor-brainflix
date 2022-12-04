@@ -43,7 +43,7 @@ const Home = () => {
     return (
         // use fragmanets below
         <>
-            {activevideo === 0 && <p>Loading page...</p>}
+            {!activevideo && <p>Loading page...</p>}
             {/* this allows for the code to wait for API to load before rendering */}
             {activevideo && (
                 <>
