@@ -14,9 +14,9 @@ import Nextvideo from '../../components/Nextvideo/Nextvideo';
 // Sprint-1 components
 const Home = () => {
     const { videoId } = useParams();
-    const [videos, setVideos] = useState(undefined);
-    const [activevideo, setActivevideo] = useState();
     const [APIkey, setAPIkey] = useState();
+    const [videos, setVideos] = useState();
+    const [activevideo, setActivevideo] = useState();
 
     useEffect(() => {
         axios.get("https://project-2-api.herokuapp.com/register")
@@ -29,7 +29,7 @@ const Home = () => {
         axios.get("https://project-2-api.herokuapp.com/videos?api_key=" + APIkey)
             .then(response => {
                 setVideos(response.data)
-                // console.log(response.data)
+                console.log(response.data)
             });
     }, [APIkey])
 
@@ -39,10 +39,10 @@ const Home = () => {
                 setActivevideo(response.data)
                 console.log(response.data)
             });
-    }, [APIkey, videoId])
+    }, [APIkey, videoId]);
 
     // const handleClickVideo = (id) => {
-    //     Data.map(details => {
+    //     activevideo.map(details => {
     //         if (details.id === id) {
     //             setVideos(details)
     //         }
