@@ -27,7 +27,6 @@ const Home = () => {
         axios.get("https://project-2-api.herokuapp.com/videos?api_key=" + APIkey)
             .then(response => {
                 setVideos(response.data)
-                console.log(response.data)
             });
     }, [APIkey])
 
@@ -35,7 +34,7 @@ const Home = () => {
         axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=` + APIkey)
             .then(response => {
                 setActivevideo(response.data)
-                console.log(response.data)
+                // The window scroll renders the page and loads from top
                 window.scrollTo(0, 0)
             });
     }, [APIkey, videoId]);
