@@ -2,7 +2,6 @@ import './Card.scss';
 import { Link } from 'react-router-dom'
 
 const Card = (props) => {
-    console.log(props);
     return (
         <>
             <Link to={`/videos/${props.id}`} className="videolink">

@@ -10,8 +10,6 @@ import Comment from '../../components/Comments/Comments';
 import Nextvideo from '../../components/Nextvideo/Nextvideo';
 import Data from '../../data/video-details.json';
 
-
-// Sprint-1 components
 const Home = () => {
     const { videoId } = useParams();
     const [APIkey, setAPIkey] = useState("");
@@ -60,120 +58,6 @@ const Home = () => {
             </div>
         </div>
     )
-
-    // const handleClickVideo = (id) => {
-    //     Data.map(details => {
-    //         if (details.id === id) {
-    //             setVideos(details)
-    //         }
-    //     })
-    // }
-
-    // return (
-    //     <>
-    //         {/* Header */}
-    //         <Header />
-    //         <Video poster={videodetails.image} />
-    //         <div className="belowvideo">
-    //             <div className="belowvideo__sectioncomments">
-    //                 <Section sections={videodetails} />
-    //                 <Commentbox commentlength={videodetails.comments.length} commentword={"Comments"} />
-    //                 <Comment comments={videodetails.comments} />
-    //             </div>
-    //             <div className="belowvideo__nextvideo">
-    //                 <p className="belowvideo__nextvideo--text">next videos</p>
-    //                 <Nextvideo handleClickVideo={handleClickVideo} nextvideo={Data} activevideoid={videodetails.id} />
-    //             </div>
-    //         </div>
-    //     </>
-    // )
-
-    // state = {
-    //     videos: [],
-    //     activeVideo: null,
-    //   };
-    //   componentDidMount() {
-    //     axios
-    //       .get(`${API_URL}videos/?api_key=${API_KEY}`)
-    //       .then((response) => {
-    //         this.setState({
-    //           videos: response.data,
-    //         });
-    //         const activeVideoId = this.props.match.params.id || response.data[0].id;
-    //         this.getActiveVideo(activeVideoId);
-    //       })
-    //       .catch((err) => console.log(err));
-    //   }
-    //   componentDidUpdate(prevProps) {
-    //     const videoId = this.props.match.params.id;
-    //     const prevVideoId = prevProps.match.params.id;
-    //     if (videoId !== prevVideoId) {
-    //       if (typeof videoId === "undefined") {
-    //         const defaultVideoId = this.state.videos[0].id;
-    //         this.getActiveVideo(defaultVideoId);
-    //       }
-    //       this.getActiveVideo(videoId).then(window.scrollTo(0, 0));
-    //     }
-    //   }
-    //   getActiveVideo(videoId) {
-    //     return axios
-    //       .get(`${API_URL}videos/${videoId}?api_key=${API_KEY}`)
-    //       .then((response) => {
-    //         this.setState({
-    //           activeVideo: response.data,
-    //         });
-    //       })
-    //       .catch((err) => console.log(err));
-    //   }
-
-
-
-
-    // code from Fahd
-    //Create a method to fetch matching id video
-    //   fetchVideo = (videoId) => {
-    //     axios
-    //       .get(`…/videos/${videoId}`)
-    //       .then((response) =>
-    //         this.setState({
-    //           selectedMovie: response.data,
-    //         })
-    //       )
-    //       .catch((err) => console.error(err));
-    //   };
-    // Add turnery && 
-
-
-
-    // Sprint 1 from Below
-    // const [videodetails, setVideoDetails] = useState(Data[0]);
-
-    // const handleClickVideo = (id) => {
-    //     Data.map(details => {
-    //         if (details.id === id) {
-    //             setVideos(details)
-    //         }
-    //     })
-    // }
-
-    // return (
-    //     <>
-    //         {/* Header */}
-    //         <Header />
-    //         <Video poster={videodetails.image} />
-    //         <div className="belowvideo">
-    //             <div className="belowvideo__sectioncomments">
-    //                 <Section sections={videodetails} />
-    //                 <Commentbox commentlength={videodetails.comments.length} commentword={"Comments"} />
-    //                 <Comment comments={videodetails.comments} />
-    //             </div>
-    //             <div className="belowvideo__nextvideo">
-    //                 <p className="belowvideo__nextvideo--text">next videos</p>
-    //                 <Nextvideo handleClickVideo={handleClickVideo} nextvideo={Data} activevideoid={videodetails.id} />
-    //             </div>
-    //         </div>
-    //     </>
-    // )
 }
 
 export default Home

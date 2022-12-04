@@ -1,7 +1,6 @@
 import './Video.scss';
 
 function Video(props) {
-    console.log(props)
     return (
         <div className="container">
             <video poster={props.poster} className="container__video">
