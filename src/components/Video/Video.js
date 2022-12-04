@@ -1,6 +1,6 @@
 import './Video.scss';
 
-function Video (props) {
+function Video(props) {
     return (
         <div className="container">
             <video poster={props.poster} className="container__video">

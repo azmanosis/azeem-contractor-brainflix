@@ -1,45 +1,21 @@
 import './App.scss';
-import Header from './components/Header/Header';
-import Video from './components/Video/Video';
-import {useState} from 'react';
-import Section from './components/Section/Section';
-import Commentbox from './components/Commentbox/Commentbox';
-import Comment from './components/Comments/Comments';
-import Nextvideo from './components/Nextvideo/Nextvideo';
-import Data from '../src/data/video-details.json';
-
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import Uploads from './pages/Uploads/Uploads';
 
 function App() {
-  
-  const [videodetails, setVideoDetails] = useState(Data[0]);
-
-
-  const handleClickVideo = (id) => {
-    Data.map(details => {
-      if(details.id === id) {
-        setVideoDetails(details)
-      }
-    })
-  }
 
   return (
     <>
-      {/* Header */}
-      <Header />
-      <Video poster={videodetails.image}/>
-      <div className="belowvideo">
-        <div className="belowvideo__sectioncomments">
-          <Section sections={videodetails}/>
-          <Commentbox commentlength={videodetails.comments.length} commentword={"Comments"}/>
-          <Comment comments={videodetails.comments} />
-        </div>
-        <div className="belowvideo__nextvideo">
-          <p className="belowvideo__nextvideo--text">next videos</p>
-          <Nextvideo handleClickVideo={handleClickVideo} nextvideo={Data} activevideoid={videodetails.id}/>
-        </div>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navigate to="/videos/84e96018-4022-434e-80bf-000ce4cd12b8" />} />
+          <Route path="/upload" element={<Uploads />} />
+          <Route path="/videos/:videoId" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
 export default App;

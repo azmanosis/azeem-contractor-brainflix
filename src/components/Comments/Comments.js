@@ -1,11 +1,11 @@
 import './Comments.scss';
 
 const Comments = (props) => {
-    console.log("this is props in comments",props);
     return props.comments.map((comment) => {
+
         function date(timestamp) {
             const d = new Date(timestamp);
-            return d.toLocaleDateString('en-US', {day:"2-digit", month:"2-digit", year:"numeric"});
+            return d.toLocaleDateString('en-US', { day: "2-digit", month: "2-digit", year: "numeric" });
         }
 
         return (
