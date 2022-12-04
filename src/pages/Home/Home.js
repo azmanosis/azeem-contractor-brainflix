@@ -8,13 +8,13 @@ import Section from '../../components/Section/Section';
 import Commentbox from '../../components/Commentbox/Commentbox';
 import Comment from '../../components/Comments/Comments';
 import Nextvideo from '../../components/Nextvideo/Nextvideo';
-import Data from '../../data/video-details.json';
+// import Data from '../../data/video-details.json';
 
 const Home = () => {
     const { videoId } = useParams();
     const [APIkey, setAPIkey] = useState("");
     const [videos, setVideos] = useState([]);
-    const [activevideo, setActivevideo] = useState(Data[0]);
+    const [activevideo, setActivevideo] = useState();
 
     useEffect(() => {
         axios.get("https://project-2-api.herokuapp.com/register")
@@ -36,27 +36,35 @@ const Home = () => {
             .then(response => {
                 setActivevideo(response.data)
                 console.log(response.data)
+                window.scrollTo(0, 0)
             });
     }, [APIkey, videoId]);
 
     return (
-        <div>
-            <Header />
-            {activevideo &&
-                <Video poster={activevideo.image} />
-            }
-            <div className="belowvideo">
-                <div className="belowvideo__sectioncomments">
-                    <Section sections={activevideo} />
-                    <Commentbox commentlength={activevideo.comments.length} commentword={"Comments"} />
-                    <Comment comments={activevideo.comments} />
-                </div>
-                <div className="belowvideo__nextvideo">
-                    <p className="belowvideo__nextvideo--text">next videos</p>
-                    <Nextvideo nextvideo={videos} activevideoid={activevideo.id} />
-                </div>
-            </div>
-        </div>
+        // use fragmanets below
+        <>
+            {activevideo === 0 && <p>Loading page...</p>}
+            {/* this allows for the code to wait for API to load before rendering */}
+            {activevideo && (
+                <>
+                    <div>
+                        <Header />
+                        <Video poster={activevideo.image} />
+                        <div className="belowvideo">
+                            <div className="belowvideo__sectioncomments">
+                                <Section sections={activevideo} />
+                                <Commentbox commentlength={activevideo.comments.length} commentword={"Comments"} />
+                                <Comment comments={activevideo.comments} />
+                            </div>
+                            <div className="belowvideo__nextvideo">
+                                <p className="belowvideo__nextvideo--text">next videos</p>
+                                <Nextvideo nextvideo={videos} activevideoid={activevideo.id} />
+                            </div>
+                        </div>
+                    </div>
+                </>
+            )}
+        </>
     )
 }
 
