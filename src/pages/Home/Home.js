@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react'
-// import { API_URL } from '../../data/api';
 import { useParams } from 'react-router-dom';
 import './Home.scss';
 import Header from '../../components/Header/Header';
@@ -9,7 +8,7 @@ import Section from '../../components/Section/Section';
 import Commentbox from '../../components/Commentbox/Commentbox';
 import Comment from '../../components/Comments/Comments';
 import Nextvideo from '../../components/Nextvideo/Nextvideo';
-// import Data from '../../data/video-details.json';
+
 
 // Sprint-1 components
 const Home = () => {
@@ -49,25 +48,25 @@ const Home = () => {
     //     })
     // }
 
-    return (
-        <div>
-            <Header />
-            {activevideo &&
-                <Video poster={activevideo.image} />
-            }
-            <div className="belowvideo">
-                <div className="belowvideo__sectioncomments">
-                    <Section sections={activevideo} />
-                    <Commentbox commentlength={activevideo.comments.length} commentword={"Comments"} />
-                    <Comment comments={activevideo.comments} />
-                </div>
-                <div className="belowvideo__nextvideo">
-                    <p className="belowvideo__nextvideo--text">next videos</p>
-                    <Nextvideo nextvideo={videos} activevideoid={activevideo.id} />
-                </div>
-            </div>
-        </div>
-    )
+    // return (
+    //     <div>
+    //         <Header />
+    //         {activevideo &&
+    //             <Video poster={activevideo.image} />
+    //         }
+    //         <div className="belowvideo">
+    //             <div className="belowvideo__sectioncomments">
+    //                 <Section sections={activevideo} />
+    //                 <Commentbox commentlength={activevideo.comments.length} commentword={"Comments"} />
+    //                 <Comment comments={activevideo.comments} />
+    //             </div>
+    //             <div className="belowvideo__nextvideo">
+    //                 <p className="belowvideo__nextvideo--text">next videos</p>
+    //                 <Nextvideo nextvideo={videos} activevideoid={activevideo.id} />
+    //             </div>
+    //         </div>
+    //     </div>
+    // )
 
     // const handleClickVideo = (id) => {
     //     Data.map(details => {
