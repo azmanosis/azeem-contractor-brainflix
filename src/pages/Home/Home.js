@@ -8,14 +8,15 @@ import Section from '../../components/Section/Section';
 import Commentbox from '../../components/Commentbox/Commentbox';
 import Comment from '../../components/Comments/Comments';
 import Nextvideo from '../../components/Nextvideo/Nextvideo';
+import Data from '../../data/video-details.json';
 
 
 // Sprint-1 components
 const Home = () => {
     const { videoId } = useParams();
-    const [APIkey, setAPIkey] = useState();
-    const [videos, setVideos] = useState();
-    const [activevideo, setActivevideo] = useState();
+    const [APIkey, setAPIkey] = useState("");
+    const [videos, setVideos] = useState([]);
+    const [activevideo, setActivevideo] = useState(Data[0]);
 
     useEffect(() => {
         axios.get("https://project-2-api.herokuapp.com/register")
@@ -39,14 +40,6 @@ const Home = () => {
                 console.log(response.data)
             });
     }, [APIkey, videoId]);
-
-    // const handleClickVideo = (id) => {
-    //     activevideo.map(details => {
-    //         if (details.id === id) {
-    //             setVideos(details)
-    //         }
-    //     })
-    // }
 
     return (
         <div>
