@@ -14,7 +14,7 @@ const Uploads = () => {
                 <div className="upload__section">
                     <div className="upload__section--thumbnail">
                         <p className="upload__section--thumbnail--words">video thumbnail</p>
-                        <img src={Uploadimage} className="upload__section--thumbnail--image" alt=""></img>
+                        <img src={Uploadimage} className="upload__section--thumbnail--image" alt="videos"></img>
                     </div>
                     <form id="publish" className="upload__section--comments">
                         <div className="upload__section--comments--a">

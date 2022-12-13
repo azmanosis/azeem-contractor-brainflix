@@ -28,7 +28,7 @@ const Home = () => {
             .then(response => {
                 setVideos(response.data)
             });
-    }, [APIkey])
+    }, [APIkey]);
 
     useEffect(() => {
         axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=` + APIkey)
