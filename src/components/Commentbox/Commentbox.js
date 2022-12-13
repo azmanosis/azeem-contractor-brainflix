@@ -15,7 +15,7 @@ function Commentbox(props) {
                         <label className="commentbox__container--b--words" for="conversation">join the conversation</label>
                         <div className="commentbox__container--b--inbut">
                             <textarea id="enter__comment" className="commentbox__container--b--inbut--input" type="text" placeholder="add a new comment" name="conversation"></textarea>
-                            <button className="commentbox__container--b--inbut--button">comment</button>
+                            <button className="commentbox__container--b--inbut--button" onClick={event => event.preventDefault()}>comment</button>
                         </div>
                     </form>
                 </div>

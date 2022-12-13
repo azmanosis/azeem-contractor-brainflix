@@ -1,6 +1,3 @@
-import axios from 'axios';
-import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom';
 import './Home.scss';
 import Header from '../../components/Header/Header';
 import Video from '../../components/Video/Video';
@@ -8,6 +5,9 @@ import Section from '../../components/Section/Section';
 import Commentbox from '../../components/Commentbox/Commentbox';
 import Comment from '../../components/Comments/Comments';
 import Nextvideo from '../../components/Nextvideo/Nextvideo';
+import axios from 'axios';
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom';
 // import Data from '../../data/video-details.json';
 
 const Home = () => {
