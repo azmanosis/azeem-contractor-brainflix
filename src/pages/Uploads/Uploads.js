@@ -26,7 +26,7 @@ const Uploads = () => {
                             <textarea id="enter__video__title" className="upload__section--comments--b--input" type="text" placeholder="Add a description to your video"></textarea>
                         </div>
                         <div className="upload__section--comments--link">
-                            <button className="upload__section--comments--link--publish" onClick={event.preventDefault()}>publish</button>
+                            <button className="upload__section--comments--link--publish" onClick={event => event.preventDefault()}>publish</button>
                             <Link to="/" className="upload__section--comments--link--cancel">
                                 <button className="upload__section--comments--link--cancel--button">cancel</button>
                             </Link>
