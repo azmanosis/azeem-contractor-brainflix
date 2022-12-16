@@ -14,7 +14,6 @@ const Card = (props) => {
                         <p className="videos__heading--channel">{props.channel}</p>
                     </div>
                 </div>
-                {/* <div></div> */}
             </Link>
         </>
     )
