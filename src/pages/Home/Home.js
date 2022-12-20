@@ -12,32 +12,32 @@ import { useParams } from 'react-router-dom';
 
 const Home = () => {
     const { videoId } = useParams();
-    const [APIkey, setAPIkey] = useState("");
+    // const [APIkey, setAPIkey] = useState("");
     const [videos, setVideos] = useState([]);
     const [activevideo, setActivevideo] = useState();
 
-    useEffect(() => {
-        axios.get("https://project-2-api.herokuapp.com/register")
-            .then(response => {
-                setAPIkey(response.data);
-            });
-    }, [])
+    // useEffect(() => {
+    //     axios.get("https://project-2-api.herokuapp.com/register")
+    //         .then(response => {
+    //             setAPIkey(response.data);
+    //         });
+    // }, [])
 
     useEffect(() => {
-        axios.get("https://project-2-api.herokuapp.com/videos?api_key=" + APIkey)
+        axios.get("http://localhost:8080/videos")
             .then(response => {
                 setVideos(response.data)
             });
-    }, [APIkey]);
+    }, []);
 
     useEffect(() => {
-        axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=` + APIkey)
+        axios.get(`http://localhost:8080/videos/${videoId}`)
             .then(response => {
                 setActivevideo(response.data)
                 // The window scroll renders the page and loads from top
                 window.scrollTo(0, 0)
             });
-    }, [APIkey, videoId]);
+    }, [videoId]);
 
     return (
         // use fragmanets below
