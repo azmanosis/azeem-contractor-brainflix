@@ -18,6 +18,8 @@
 .env.test.local
 .env.production.local
 .smbdeleteAAA2b32c2
+.smbdeleteAAA2f7d41
+.smbdeleteAAA33f949
 
 npm-debug.log*
 yarn-debug.log*
