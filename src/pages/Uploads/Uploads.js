@@ -29,7 +29,6 @@ const Uploads = () => {
 
     return (
         <>
-            {/* Header */}
             <Header />
 
             <div className="upload">

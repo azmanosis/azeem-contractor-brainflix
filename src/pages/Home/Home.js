@@ -8,11 +8,9 @@ import Nextvideo from '../../components/Nextvideo/Nextvideo';
 import axios from 'axios';
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-// import Data from '../../data/video-details.json';
 
 const Home = () => {
     const { videoId } = useParams();
-    // const [APIkey, setAPIkey] = useState("");
     const [videos, setVideos] = useState([]);
     const [activevideo, setActivevideo] = useState();
 
