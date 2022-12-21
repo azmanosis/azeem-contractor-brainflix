@@ -16,13 +16,6 @@ const Home = () => {
     const [videos, setVideos] = useState([]);
     const [activevideo, setActivevideo] = useState();
 
-    // useEffect(() => {
-    //     axios.get("https://project-2-api.herokuapp.com/register")
-    //         .then(response => {
-    //             setAPIkey(response.data);
-    //         });
-    // }, [])
-
     useEffect(() => {
         axios.get("http://localhost:8080/videos")
             .then(response => {
